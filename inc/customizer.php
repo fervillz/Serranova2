@@ -132,7 +132,7 @@ function Serranova_customizer( $wp_customize )
 	) ) );
 
 	$wp_customize->add_setting( 'Serranova_hero_title', array(
-		'default'           => __( 'Serranova WORDPRESS THEME', 'Serranova' ),
+		'default'           => __( 'Serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.', 'Serranova' ),
 		'sanitize_callback' => 'sanitize_text_field',
 		'type'              => 'theme_mod',
 		'transport'         => 'postMessage',

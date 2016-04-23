@@ -61,9 +61,6 @@ function Serranova_load_theme_colors()
 		echo '.tab_head li:hover a {color: #fff !important;}';
 	}
 	
-	
-
-	echo '#hero .hero-overlay {background-color: '.$heroImageOverlayColor.'; opacity: '.round($heroImageOverlayOpacity / 100, 2).'}';
 	echo '#hero .hero-bg {filter: blur('.$heroImageBlur.'px); -webkit-filter: blur('.$heroImageBlur.'px);}';
 	echo '#hero .hero-bg { background-image: ' . ( $hero_image_bg ? 'url(' . $hero_image_bg . ')' : 'none' ) . '}';
 	echo '</style>';

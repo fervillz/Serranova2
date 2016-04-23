@@ -77,11 +77,11 @@ a:hover {
    =============== */
 
 header {
-	    background-color: #ffffff;
+		background-color: #ffffff;
 	margin: 0px;
 	font-weight: 400;
-	padding-top: 25px;
-	padding-bottom: 25px;
+	padding-top: 55px;
+	padding-bottom: 55px;
 }
 #site-branding {
 	float: left;
@@ -118,12 +118,13 @@ h1.site-title:hover {
 }
 #hero {
 	margin-bottom: 0px;
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: 120px;
+	padding-bottom: 90px;
 	overflow: hidden;
 	position: relative;
 	text-align: left;
 	border-bottom: 30px solid #bbf3cc;
+	background-color: #f7f7f7;
 }
 #hero .hero-bg {
 	position: absolute;
@@ -136,11 +137,11 @@ h1.site-title:hover {
 	
 }
 #hero h2 {
-	font-size: 35px;
+	font-size: 30px;
 	margin-bottom: 30px;
 	padding-left: 20px;
 	padding-right: 20px;
-	color: #fff;
+	color: #1e1e1e;
 }
 #hero i {
 	color: #bbf3cc;
@@ -153,7 +154,7 @@ h1.site-title:hover {
 	font-weight: 300;
 	padding-left: 20px;
 	padding-right: 20px;
-	color: #ccc;
+	color: #bebebe;
 }
 .herotext a {
 	color: #bbf3cc;
@@ -179,18 +180,6 @@ h1.site-title:hover {
 	text-transform: uppercase;
 	margin-right: 10px;
 	-webkit-appearance: initial;
-}
-#hero .hero-overlay {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background-color: #1f242d;
-	opacity: 0.9
-}
-.hero-overlay.hidden {
-	display: none;
 }
 #hero .fa:hover {
 	color: #fff;
@@ -2387,11 +2376,11 @@ a.pink:hover {
 
 @keyframes bounce {
   0%, 100% { 
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
+	transform: scale(0.0);
+	-webkit-transform: scale(0.0);
   } 50% { 
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
+	transform: scale(1.0);
+	-webkit-transform: scale(1.0);
   }
 }
 
@@ -2499,11 +2488,11 @@ a.pink:hover {
 
 @keyframes bouncedelay {
   0%, 80%, 100% { 
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
+	transform: scale(0.0);
+	-webkit-transform: scale(0.0);
   } 40% { 
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
+	transform: scale(1.0);
+	-webkit-transform: scale(1.0);
   }
 }
 
@@ -2545,11 +2534,11 @@ a.pink:hover {
 
 @keyframes bounce {
   0%, 100% { 
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
+	transform: scale(0.0);
+	-webkit-transform: scale(0.0);
   } 50% { 
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
+	transform: scale(1.0);
+	-webkit-transform: scale(1.0);
   }
 }
 
@@ -2569,14 +2558,14 @@ a.pink:hover {
 
 @keyframes rotateplane {
   0% { 
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+	transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+	-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
   } 50% { 
-    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+	transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+	-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
   } 100% { 
-    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+	transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+	-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
 }
 
@@ -2612,20 +2601,20 @@ a.pink:hover {
 
 @keyframes cubemove {
   25% { 
-    transform: translateX(42px) rotate(-90deg) scale(0.5);
-    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+	transform: translateX(42px) rotate(-90deg) scale(0.5);
+	-webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
   } 50% { 
-    transform: translateX(42px) translateY(42px) rotate(-179deg);
-    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+	transform: translateX(42px) translateY(42px) rotate(-179deg);
+	-webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
   } 50.1% { 
-    transform: translateX(42px) translateY(42px) rotate(-180deg);
-    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+	transform: translateX(42px) translateY(42px) rotate(-180deg);
+	-webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
   } 75% { 
-    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+	transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+	-webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
   } 100% { 
-    transform: rotate(-360deg);
-    -webkit-transform: rotate(-360deg);
+	transform: rotate(-360deg);
+	-webkit-transform: rotate(-360deg);
   }
 }
 
@@ -2673,62 +2662,62 @@ a.pink:hover {
 
 @keyframes stretchdelay {
   0%, 40%, 100% { 
-    transform: scaleY(0.4);
-    -webkit-transform: scaleY(0.4);
+	transform: scaleY(0.4);
+	-webkit-transform: scaleY(0.4);
   }  20% { 
-    transform: scaleY(1.0);
-    -webkit-transform: scaleY(1.0);
+	transform: scaleY(1.0);
+	-webkit-transform: scaleY(1.0);
   }
 }
   .spinner7 {
-      width: 90px;
-      height: 30px;
-      text-align: center;
-    }
+	  width: 90px;
+	  height: 30px;
+	  text-align: center;
+	}
 
-    .spinner7 > div {
-      background-color: #fff;
-      height: 15px;
-      width: 15px;
-      margin-left:3px;
-      border-radius: 50%;
-      display: inline-block;
-      
-      -webkit-animation: stretchdelay 0.7s infinite ease-in-out;
-      animation: stretchdelay 0.7s infinite ease-in-out;
-    }
+	.spinner7 > div {
+	  background-color: #fff;
+	  height: 15px;
+	  width: 15px;
+	  margin-left:3px;
+	  border-radius: 50%;
+	  display: inline-block;
+	  
+	  -webkit-animation: stretchdelay 0.7s infinite ease-in-out;
+	  animation: stretchdelay 0.7s infinite ease-in-out;
+	}
 
-    .spinner7 .circ2 {
-      -webkit-animation-delay: -0.6s;
-      animation-delay: -0.6s;
-    }
+	.spinner7 .circ2 {
+	  -webkit-animation-delay: -0.6s;
+	  animation-delay: -0.6s;
+	}
 
-    .spinner7 .circ3 {
-      -webkit-animation-delay: -0.5s;
-      animation-delay: -0.5s;
-    }
+	.spinner7 .circ3 {
+	  -webkit-animation-delay: -0.5s;
+	  animation-delay: -0.5s;
+	}
 
-    .spinner7 .circ4 {
-      -webkit-animation-delay: -0.4s;
-      animation-delay: -0.4s;
-    }
+	.spinner7 .circ4 {
+	  -webkit-animation-delay: -0.4s;
+	  animation-delay: -0.4s;
+	}
 
-    .spinner7 .circ5 {
-      -webkit-animation-delay: -0.3s;
-      animation-delay: -0.3s;
-    }
+	.spinner7 .circ5 {
+	  -webkit-animation-delay: -0.3s;
+	  animation-delay: -0.3s;
+	}
 
-    @-webkit-keyframes stretchdelay {
-      0%, 40%, 100% { -webkit-transform: translateY(-10px) }  
-      20% { -webkit-transform: translateY(-20px) }
-    }
+	@-webkit-keyframes stretchdelay {
+	  0%, 40%, 100% { -webkit-transform: translateY(-10px) }  
+	  20% { -webkit-transform: translateY(-20px) }
+	}
 
-    @keyframes stretchdelay {
-      0%, 40%, 100% { 
-        transform: translateY(-10px);
-        -webkit-transform: translateY(-10px);
-      } 20% {
-        transform: translateY(-20px);
-        -webkit-transform: translateY(-20px);
-      }
-    }
+	@keyframes stretchdelay {
+	  0%, 40%, 100% { 
+		transform: translateY(-10px);
+		-webkit-transform: translateY(-10px);
+	  } 20% {
+		transform: translateY(-20px);
+		-webkit-transform: translateY(-20px);
+	  }
+	}

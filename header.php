@@ -100,16 +100,6 @@
 
 
 <div id="hero">
-	<div class="hero-bg"></div>
-	<?php
-	$Serranova_hero_overlay_enabled = get_theme_mod( 'Serranova_hero_overlay_enabled', 'no' );
-	$hidden = '';
-	if ( $Serranova_hero_overlay_enabled === 'no' ) {
-		$hidden = 'hidden';
-	}
-	echo '<div class="hero-overlay ' . $hidden . '"></div>';
-	?>
-
 	<div class="wrapper">
 
 			<?php get_template_part( 'inc/partials/content', 'header-hero' ); ?>

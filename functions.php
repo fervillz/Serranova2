@@ -217,8 +217,8 @@ function Serranova_set_sample_content()
 		set_theme_mod( 'Serranova_header_logo_text', get_bloginfo( 'name' ) );
 		set_theme_mod( 'Serranova_hero_show', 'yes' );
 		set_theme_mod( 'Serranova_hero_bg_image', get_template_directory_uri() . '/images/header.jpg' );
-		set_theme_mod( 'Serranova_hero_title', 'Serranova WORDPRESS THEME' );
-		set_theme_mod( 'Serranova_hero_text', 'Serranova is a nice modern looking WordPress theme which is suitable for business sites, personal blogs and you can also use it with the <a href="http://www.woothemes.com/woocommerce/">Free WooCommerce plugin</a> to create your own eCommerce site. It is super simple to setup with some nice options controlled using the Live Customizer.' );
+		set_theme_mod( 'Serranova_hero_title', 'Serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.' );
+		set_theme_mod( 'Serranova_hero_text', 'Clean code, WordPress standards and no bloating, guaranteed..' );
 		set_theme_mod( 'Serranova_hero_overlay_enabled', 'yes' );
 		set_theme_mod( 'Serranova_hero_overlay_opacity', 90 );
 
