@@ -222,18 +222,6 @@ function Serranova_set_sample_content()
 		set_theme_mod( 'Serranova_hero_overlay_enabled', 'yes' );
 		set_theme_mod( 'Serranova_hero_overlay_opacity', 90 );
 
-		set_theme_mod( 'Serranova_header_social_twitter', 'http://twitter.com' );
-		set_theme_mod( 'Serranova_header_social_facebook', 'https://facebook.com' );
-		set_theme_mod( 'Serranova_header_social_pinterest', 'https://pinterest.com' );
-		set_theme_mod( 'Serranova_header_social_linkedin', 'https://linkedin.com' );
-		set_theme_mod( 'Serranova_header_social_gplus', 'https://plus.google.com' );
-		set_theme_mod( 'Serranova_header_social_behance', 'http://behance.net' );
-		set_theme_mod( 'Serranova_header_social_dribbble', 'http://dribbble.com' );
-		set_theme_mod( 'Serranova_header_social_flickr', 'http://flickr.com' );
-		set_theme_mod( 'Serranova_header_social_500px', 'http://500px.com' );
-		set_theme_mod( 'Serranova_header_social_reddit', 'http://reddit.com' );
-		set_theme_mod( 'Serranova_header_social_wordpress', 'http://wordpress.com' );
-		set_theme_mod( 'Serranova_header_social_youtube', 'http://youtube.com' );
 		set_theme_mod( 'Serranova_hero_button1_text', __( 'About us', 'Serranova' ) );
 		set_theme_mod( 'Serranova_hero_button2_text', __( 'Contact us', 'Serranova' ) );
 
