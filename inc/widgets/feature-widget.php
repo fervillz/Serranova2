@@ -1,8 +1,8 @@
 <?php
 /**
- * Adds Serranova_Feature_Widget widget.
+ * Adds serranova_Feature_Widget widget.
  */
-class Serranova_Feature_Widget extends WP_Widget
+class serranova_Feature_Widget extends WP_Widget
 {
 
 	/**
@@ -11,7 +11,7 @@ class Serranova_Feature_Widget extends WP_Widget
 	public function __construct()
 	{
 		parent::__construct(
-			'Serranova-feature-widget', // Base ID
+			'serranova-feature-widget', // Base ID
 			'Feature Widget', // Name
 			array( 'description' => 'Front Page Feature Widget' )
 		);
@@ -88,7 +88,7 @@ class Serranova_Feature_Widget extends WP_Widget
 
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'Serranova' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'serranova' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>"
 				   name="<?php echo $this->get_field_name( 'title' ); ?>" type="text"
 				   value="<?php echo esc_attr( $title ); ?>"/>
@@ -97,7 +97,7 @@ class Serranova_Feature_Widget extends WP_Widget
 
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'url' ); ?>"><?php _e( 'URL:', 'Serranova' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'url' ); ?>"><?php _e( 'URL:', 'serranova' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'url' ); ?>"
 				   name="<?php echo $this->get_field_name( 'url' ); ?>" type="text"
 				   value="<?php echo esc_attr( $url ); ?>"/>
@@ -105,14 +105,14 @@ class Serranova_Feature_Widget extends WP_Widget
 
 		<p>
 			<label
-				for="<?php echo $this->get_field_id( 'icon' ); ?>"><?php _e( 'Icon (see <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">this link</a> for reference):', 'Serranova' ); ?></label>
+				for="<?php echo $this->get_field_id( 'icon' ); ?>"><?php _e( 'Icon (see <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">this link</a> for reference):', 'serranova' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'icon' ); ?>"
 				   name="<?php echo $this->get_field_name( 'icon' ); ?>" type="text"
 				   value="<?php echo esc_attr( $icon ); ?>"/>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'textbox' ); ?>"><?php _e( 'Text:', 'Serranova' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'textbox' ); ?>"><?php _e( 'Text:', 'serranova' ); ?></label>
 			<textarea class="widefat" id="<?php echo $this->get_field_id( 'textbox' ); ?>"
 				   name="<?php echo $this->get_field_name( 'textbox' ); ?>"><?php echo esc_attr( $textbox ); ?></textarea>
 		</p>
@@ -122,9 +122,9 @@ class Serranova_Feature_Widget extends WP_Widget
 
 }
 // init the widget
-function Serranova_register_feature_widget()
+function serranova_register_feature_widget()
 {
-	register_widget( 'Serranova_Feature_Widget' );
+	register_widget( 'serranova_Feature_Widget' );
 }
 
-add_action( 'widgets_init', 'Serranova_register_feature_widget' );
+add_action( 'widgets_init', 'serranova_register_feature_widget' );

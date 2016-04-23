@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Serranova
+ * @package serranova
  */
 
 ?>
@@ -13,8 +13,8 @@
 
 
 		<?php
-		if ( is_active_sidebar( 'Serranova-features' ) ) {
-			dynamic_sidebar( 'Serranova-features' );
+		if ( is_active_sidebar( 'serranova-features' ) ) {
+			dynamic_sidebar( 'serranova-features' );
 		}
 		?>
  </div><!-- End featurearea -->

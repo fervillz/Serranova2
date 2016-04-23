@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package Serranova
+ * @package serranova
  */
  
 

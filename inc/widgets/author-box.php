@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Adds Serranova_Team_Member_Widget widget.
+ * Adds serranova_Team_Member_Widget widget.
  */
-class Serranova_Author_Box_Widget extends WP_Widget
+class serranova_Author_Box_Widget extends WP_Widget
 {
 
 	public function __construct()
 	{
 		parent::__construct(
-			'Serranova-author-box-widget',
-			__( 'Author Box Widget', 'Serranova' ),
+			'serranova-author-box-widget',
+			__( 'Author Box Widget', 'serranova' ),
 			array(
-				'description' => __( 'Author box widget for the sidebar', 'Serranova' ),
+				'description' => __( 'Author box widget for the sidebar', 'serranova' ),
 			)
 		);
 	}
@@ -125,8 +125,8 @@ class Serranova_Author_Box_Widget extends WP_Widget
 	 */
 	public function form( $instance )
 	{
-		echo '<div class="Serranova-author-box-widget-container">';
-		echo '<label for="author">' . __( 'Settings for author: ', 'Serranova' ) . '</label>';
+		echo '<div class="serranova-author-box-widget-container">';
+		echo '<label for="author">' . __( 'Settings for author: ', 'serranova' ) . '</label>';
 		// show only admin user - author box widget will always display admin info
 		$admin = get_user_by( 'email', get_option( 'admin_email' ) );
 		wp_dropdown_users( array( 'name' => 'author', 'include' => $admin->ID ) );
@@ -138,8 +138,8 @@ class Serranova_Author_Box_Widget extends WP_Widget
 				$showUserId = $user->ID;
 				$i++;
 			}
-			$title = ( isset( $instance['title-' . $user->ID] ) ) ? $instance['title-' . $user->ID] : __( 'AUTHOR PROFILE', 'Serranova' );
-			$textbox = ( isset( $instance['textbox-' . $user->ID] ) ) ? $instance['textbox-' . $user->ID] : __( 'About the author text', 'Serranova' );
+			$title = ( isset( $instance['title-' . $user->ID] ) ) ? $instance['title-' . $user->ID] : __( 'AUTHOR PROFILE', 'serranova' );
+			$textbox = ( isset( $instance['textbox-' . $user->ID] ) ) ? $instance['textbox-' . $user->ID] : __( 'About the author text', 'serranova' );
 			$image_url = ( isset ( $instance['image_url-' . $user->ID] ) ) ? $instance['image_url-' . $user->ID] : get_template_directory_uri() . '/images/author_profile.png';
 			$social_twitter = ( isset ( $instance['social_twitter-' . $user->ID] ) ) ? $instance['social_twitter-' . $user->ID] : '';
 			$social_facebook = ( isset ( $instance['social_facebook-' . $user->ID] ) ) ? $instance['social_facebook-' . $user->ID] : '';
@@ -158,12 +158,12 @@ class Serranova_Author_Box_Widget extends WP_Widget
 			$social_soundcloud = ( isset ( $instance['social_soundcloud-' . $user->ID] ) ) ? $instance['social_soundcloud-' . $user->ID] : '';
 			$social_medium = ( isset ( $instance['social_medium-' . $user->ID] ) ) ? $instance['social_medium-' . $user->ID] : '';
 			?>
-			<div id="Serranova-author-box-settings-<?php echo $user->ID; ?>" class="hidden"
+			<div id="serranova-author-box-settings-<?php echo $user->ID; ?>" class="hidden"
 				 style="<?php if ( $showUserId === $user->ID ): ?>display: block;<?php endif; ?>">
 
 				<p>
 					<label
-						for="<?php echo $this->get_field_id( 'title-' . $user->ID ); ?>"><?php _e( 'Title', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'title-' . $user->ID ); ?>"><?php _e( 'Title', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'title-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'title-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $title ); ?>"/>
@@ -171,104 +171,104 @@ class Serranova_Author_Box_Widget extends WP_Widget
 
 				<p>
 					<label
-						for="<?php echo $this->get_field_id( 'textbox-' . $user->ID ); ?>"><?php _e( 'About:', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'textbox-' . $user->ID ); ?>"><?php _e( 'About:', 'serranova' ); ?></label>
 					<textarea class="widefat" id="<?php echo $this->get_field_id( 'textbox-' . $user->ID ); ?>"
 							  name="<?php echo $this->get_field_name( 'textbox-' . $user->ID ); ?>"><?php echo esc_attr( $textbox ); ?></textarea>
 				</p>
 
 				<p>
 					<label
-						for="<?php echo $this->get_field_id( 'social_twitter-' . $user->ID ); ?>"><?php _e( 'Twitter url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_twitter-' . $user->ID ); ?>"><?php _e( 'Twitter url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_twitter-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_twitter-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_twitter ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_facebook-' . $user->ID ); ?>"><?php _e( 'Facebook url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_facebook-' . $user->ID ); ?>"><?php _e( 'Facebook url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_facebook-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_facebook-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_facebook ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_dribbble-' . $user->ID ); ?>"><?php _e( 'Dribbble url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_dribbble-' . $user->ID ); ?>"><?php _e( 'Dribbble url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_dribbble-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_dribbble-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_dribbble ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_pinterest-' . $user->ID ); ?>"><?php _e( 'Pinterest url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_pinterest-' . $user->ID ); ?>"><?php _e( 'Pinterest url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_pinterest-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_pinterest-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_pinterest ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_linkedin-' . $user->ID ); ?>"><?php _e( 'Linkedin url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_linkedin-' . $user->ID ); ?>"><?php _e( 'Linkedin url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_linkedin-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_linkedin-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_linkedin ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_drupal-' . $user->ID ); ?>"><?php _e( 'Drupal url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_drupal-' . $user->ID ); ?>"><?php _e( 'Drupal url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_drupal-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_drupal-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_drupal ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_wordpress-' . $user->ID ); ?>"><?php _e( 'Wordpress url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_wordpress-' . $user->ID ); ?>"><?php _e( 'Wordpress url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_wordpress-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_wordpress-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_wordpress ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_y-combinator-' . $user->ID ); ?>"><?php _e( 'Y-combinator url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_y-combinator-' . $user->ID ); ?>"><?php _e( 'Y-combinator url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_y-combinator-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_y-combinator-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_ycombinator ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_google-plus-' . $user->ID ); ?>"><?php _e( 'Google+ url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_google-plus-' . $user->ID ); ?>"><?php _e( 'Google+ url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_google-plus-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_google-plus-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_gplus ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_behance-' . $user->ID ); ?>"><?php _e( 'Behance url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_behance-' . $user->ID ); ?>"><?php _e( 'Behance url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_behance-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_behance-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_behance ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_500px-' . $user->ID ); ?>"><?php _e( '500px url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_500px-' . $user->ID ); ?>"><?php _e( '500px url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_500px-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_500px-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_500px ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_flickr-' . $user->ID ); ?>"><?php _e( 'Flickr url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_flickr-' . $user->ID ); ?>"><?php _e( 'Flickr url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_flickr-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_flickr-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_flickr ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_reddit-' . $user->ID ); ?>"><?php _e( 'Reddit url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_reddit-' . $user->ID ); ?>"><?php _e( 'Reddit url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_reddit-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_reddit-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_reddit ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_youtube-' . $user->ID ); ?>"><?php _e( 'Youtube url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_youtube-' . $user->ID ); ?>"><?php _e( 'Youtube url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_youtube-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_youtube-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_youtube ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_soundcloud-' . $user->ID ); ?>"><?php _e( 'Soundcloud url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_soundcloud-' . $user->ID ); ?>"><?php _e( 'Soundcloud url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_soundcloud-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_soundcloud-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_soundcloud ); ?>"/>
 
 					<label
-						for="<?php echo $this->get_field_id( 'social_medium-' . $user->ID ); ?>"><?php _e( 'Medium url', 'Serranova' ); ?></label>
+						for="<?php echo $this->get_field_id( 'social_medium-' . $user->ID ); ?>"><?php _e( 'Medium url', 'serranova' ); ?></label>
 					<input class="widefat" id="<?php echo $this->get_field_id( 'social_medium-' . $user->ID ); ?>"
 						   name="<?php echo $this->get_field_name( 'social_medium-' . $user->ID ); ?>" type="text"
 						   value="<?php echo esc_attr( $social_medium ); ?>"/>
@@ -276,18 +276,18 @@ class Serranova_Author_Box_Widget extends WP_Widget
 
 				<p>
 					<label
-						for="<?php echo $this->get_field_id( 'image_url-' . $user->ID ); ?>"><?php _e( 'Image:', 'Serranova' ); ?></label><br/>
+						for="<?php echo $this->get_field_id( 'image_url-' . $user->ID ); ?>"><?php _e( 'Image:', 'serranova' ); ?></label><br/>
 					<input type="text" class="img"
 						   name="<?php echo $this->get_field_name( 'image_url-' . $user->ID ); ?>"
 						   id="<?php echo $this->get_field_id( 'image_url-' . $user->ID ); ?>"
 						   value="<?php echo esc_attr( $image_url ); ?>"/>
-					<input type="button" class="Serranova-select-img"
-						   value="<?php _e( 'Select Image', 'Serranova' ); ?>"/>
+					<input type="button" class="serranova-select-img"
+						   value="<?php _e( 'Select Image', 'serranova' ); ?>"/>
 				</p>
 			</div>
 		<?php
 		endforeach;
-		echo '<input type="hidden" id="Serranova-current-author" name="' . $this->get_field_name( 'author' ) . '" value="' . $users[0]->ID . '">';
+		echo '<input type="hidden" id="serranova-current-author" name="' . $this->get_field_name( 'author' ) . '" value="' . $users[0]->ID . '">';
 		echo '</div>';
 	}
 
@@ -295,20 +295,20 @@ class Serranova_Author_Box_Widget extends WP_Widget
 }
 
 // init the widget
-function Serranova_register_author_box_widget()
+function serranova_register_author_box_widget()
 {
-	register_widget( 'Serranova_Author_Box_Widget' );
+	register_widget( 'serranova_Author_Box_Widget' );
 }
 
-add_action( 'widgets_init', 'Serranova_register_author_box_widget' );
+add_action( 'widgets_init', 'serranova_register_author_box_widget' );
 
 // queue up the necessary js
-function Serranova_author_box_widget_script_enqueue()
+function serranova_author_box_widget_script_enqueue()
 {
 	wp_enqueue_style( 'thickbox' );
 	wp_enqueue_script( 'media-upload' );
 	wp_enqueue_script( 'thickbox' );
-	wp_enqueue_script( 'Serranova_author_box_widget_js', get_template_directory_uri() . '/inc/js/widget-author-box.js', null, null, true );
+	wp_enqueue_script( 'serranova_author_box_widget_js', get_template_directory_uri() . '/inc/js/widget-author-box.js', null, null, true );
 }
 
-add_action( 'admin_enqueue_scripts', 'Serranova_author_box_widget_script_enqueue' );
+add_action( 'admin_enqueue_scripts', 'serranova_author_box_widget_script_enqueue' );

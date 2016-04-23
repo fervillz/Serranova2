@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package Serranova
+ * @package serranova
  */
 ?>
 <div class="col-1-3"><div class="wrap-col sidebar">

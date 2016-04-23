@@ -1,8 +1,8 @@
 <?php
 /**
- * Serranova functions and definitions
+ * serranova functions and definitions
  *
- * @package Serranova
+ * @package serranova
  */
 
 /**
@@ -12,7 +12,7 @@ if ( !isset( $content_width ) ) {
 	$content_width = 740; /* pixels */
 }
 
-if ( !function_exists( 'Serranova_setup' ) ) :
+if ( !function_exists( 'serranova_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -20,16 +20,16 @@ if ( !function_exists( 'Serranova_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function Serranova_setup()
+	function serranova_setup()
 	{
 
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Serranova, use a find and replace
-		 * to change 'Serranova' to the name of your theme in all the template files
+		 * If you're building a theme based on serranova, use a find and replace
+		 * to change 'serranova' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'Serranova', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'serranova', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -54,17 +54,17 @@ if ( !function_exists( 'Serranova_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'Serranova_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'serranova_custom_background_args', array(
 			'default-color' => 'f6f6f6',
 			'default-image' => '',
-			'panel'         => 'Serranova_colors',
+			'panel'         => 'serranova_colors',
 		) ) );
 
-		add_image_size( 'Serranova-full', 740, 415, true );
-		add_image_size( 'Serranova-blog-thumb', 690, 390, true );
+		add_image_size( 'serranova-full', 740, 415, true );
+		add_image_size( 'serranova-blog-thumb', 690, 390, true );
 	}
 endif;
-add_action( 'after_setup_theme', 'Serranova_setup' );
+add_action( 'after_setup_theme', 'serranova_setup' );
 
 
 // WooCommerce Support
@@ -75,9 +75,9 @@ function woocommerce_support() {
 
 // This theme uses wp_nav_menu() in one location.
 register_nav_menus( array(
-	'primary' => __( 'Primary Menu', 'Serranova' ),
+	'primary' => __( 'Primary Menu', 'serranova' ),
 ) );
-function Serranova_set_sample_content()
+function serranova_set_sample_content()
 {
 
 
@@ -89,37 +89,37 @@ function Serranova_set_sample_content()
 		$menu = get_term_by( 'name', $name, 'nav_menu' );
 
 		wp_update_nav_menu_item( $menu->term_id, 0, array(
-				'menu-item-title'  => __( 'Home', 'Serranova' ),
+				'menu-item-title'  => __( 'Home', 'serranova' ),
 				'menu-item-url'    => home_url( '/' ),
 				'menu-item-status' => 'publish' )
 		);
 
 		wp_update_nav_menu_item( $menu->term_id, 0, array(
-				'menu-item-title'  => __( 'Pricing', 'Serranova' ),
+				'menu-item-title'  => __( 'Pricing', 'serranova' ),
 				'menu-item-url'    => home_url( '/' ),
 				'menu-item-status' => 'publish' )
 		);
 
 		wp_update_nav_menu_item( $menu->term_id, 0, array(
-				'menu-item-title'  => __( 'Blog', 'Serranova' ),
+				'menu-item-title'  => __( 'Blog', 'serranova' ),
 				'menu-item-url'    => home_url( '/' ),
 				'menu-item-status' => 'publish' )
 		);
 
 		wp_update_nav_menu_item( $menu->term_id, 0, array(
-				'menu-item-title'  => __( 'Contact', 'Serranova' ),
+				'menu-item-title'  => __( 'Contact', 'serranova' ),
 				'menu-item-url'    => home_url( '/' ),
 				'menu-item-status' => 'publish' )
 		);
 
 		wp_update_nav_menu_item( $menu->term_id, 0, array(
-				'menu-item-title'  => __( 'Members', 'Serranova' ),
+				'menu-item-title'  => __( 'Members', 'serranova' ),
 				'menu-item-url'    => home_url( '/' ),
 				'menu-item-status' => 'publish' )
 		);
 
 		wp_update_nav_menu_item( $menu->term_id, 0, array(
-				'menu-item-title'  => __( 'Sign up', 'Serranova' ),
+				'menu-item-title'  => __( 'Sign up', 'serranova' ),
 				'menu-item-url'    => home_url( '/' ),
 				'menu-item-status' => 'publish' )
 		);
@@ -130,17 +130,17 @@ function Serranova_set_sample_content()
 	}
 
 	// set sample content - text, images, titles, team members
-	if ( !get_theme_mod( 'Serranova_content_set', false ) ) {
+	if ( !get_theme_mod( 'serranova_content_set', false ) ) {
 		// set up default widgets
 		$active_sidebars = get_option( 'sidebars_widgets' );
 		$search_widget = get_option( 'widget_search' );
-		$search_widget[1] = array( 'title' => __( 'Search', 'Serranova' ) );
+		$search_widget[1] = array( 'title' => __( 'Search', 'serranova' ) );
 
 		$admin = get_user_by( 'email', get_option( 'admin_email' ) );
 		$userId = $admin->ID;
-		$author_box_widget = get_option( 'widget_Serranova-author-box-widget' );
+		$author_box_widget = get_option( 'widget_serranova-author-box-widget' );
 		$author_box_widget[1] = array(
-			'title-' . $userId               => __( 'AUTHOR PROFILE', 'Serranova' ),
+			'title-' . $userId               => __( 'AUTHOR PROFILE', 'serranova' ),
 			'textbox-' . $userId             => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus erat eget rhoncus facilisis. Duis et lacus ut tellus fermentum ultricies quis sit amet mauris. Nullam molestie, mauris ac ultrices tincidunt, sapien turpis rhoncus tellus, sed sagittis dui felis molestie risus.',
 			'image_url-' . $userId           => get_template_directory_uri() . '/images/author_profile.png',
 			'social_twitter-' . $userId      => 'http://twitter.com',
@@ -155,84 +155,82 @@ function Serranova_set_sample_content()
 		);
 
 
-		$popular_recent_posts_widget = get_option( 'widget_Serranova-recent-popular-posts-widget' );
+		$popular_recent_posts_widget = get_option( 'widget_serranova-recent-popular-posts-widget' );
 		$popular_recent_posts_widget[1] = array( 'title-popular' => 'Popular', 'title-recent' => 'Recent', 'timeframe' => 'week', 'limit' => 3 );
 
 		$text_widget = get_option( 'widget_text' );
-		$text_widget[1] = array( 'title' => __( 'Text Widget', 'Serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
-		$text_widget[2] = array( 'title' => __( 'Text Widget', 'Serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
-		$text_widget[3] = array( 'title' => __( 'Text Widget', 'Serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
-		$text_widget[4] = array( 'title' => __( 'Text Widget', 'Serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
+		$text_widget[1] = array( 'title' => __( 'Text Widget', 'serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
+		$text_widget[2] = array( 'title' => __( 'Text Widget', 'serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
+		$text_widget[3] = array( 'title' => __( 'Text Widget', 'serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
+		$text_widget[4] = array( 'title' => __( 'Text Widget', 'serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
 
 
-		$active_sidebars['Serranova-footer'] = array( 'text-1', 'text-2', 'text-3', 'text-4' );
-		update_option( 'widget_Serranova-author-box-widget', $author_box_widget );
-		update_option( 'widget_Serranova-recent-popular-posts-widget', $popular_recent_posts_widget );
+		$active_sidebars['serranova-footer'] = array( 'text-1', 'text-2', 'text-3', 'text-4' );
+		update_option( 'widget_serranova-author-box-widget', $author_box_widget );
+		update_option( 'widget_serranova-recent-popular-posts-widget', $popular_recent_posts_widget );
 		update_option( 'sidebars_widgets', $active_sidebars );
 
-		$active_sidebars['sidebar-1'] = array( 'Serranova-author-box-widget-1', 'text-4', 'search-1', 'Serranova-recent-popular-posts-widget-1' );
+		$active_sidebars['sidebar-1'] = array( 'serranova-author-box-widget-1', 'text-4', 'search-1', 'serranova-recent-popular-posts-widget-1' );
 		update_option( 'widget_search', $search_widget );
 		update_option( 'widget_text', $text_widget );
 		update_option( 'sidebars_widgets', $active_sidebars );
 
 
-		$feature_widget = get_option( 'widget_Serranova-feature-widget' );
+		$feature_widget = get_option( 'widget_serranova-feature-widget' );
 		$feature_widget[1] = array(
-			'title'   => __( 'Modern Design', 'Serranova' ),
-			'textbox' => 'Serranova has a nice homepage with a hero header area so you can write some into text with call to action buttons and links to your social media profiles.',
+			'title'   => __( 'Modern Design', 'serranova' ),
+			'textbox' => 'serranova has a nice homepage with a hero header area so you can write some into text with call to action buttons and links to your social media profiles.',
 			'url'     => get_home_url(),
 			'icon'    => 'fa-desktop',
 
 		);
 		$feature_widget[2] = array(
-			'title'   => __( 'eCommerce Ready', 'Serranova' ),
-			'textbox' => 'Use Serranova with the <a href="http://www.woothemes.com/woocommerce/">WooCommerce plugin</a> and you can create your own online store to sell digital or tangible products with no fuss.',
+			'title'   => __( 'eCommerce Ready', 'serranova' ),
+			'textbox' => 'Use serranova with the <a href="http://www.woothemes.com/woocommerce/">WooCommerce plugin</a> and you can create your own online store to sell digital or tangible products with no fuss.',
 			'url'     => get_home_url(),
 			'icon'    => ' fa-shopping-basket',
 
 		);
 		$feature_widget[3] = array(
-			'title'   => __( 'Live Customize', 'Serranova' ),
+			'title'   => __( 'Live Customize', 'serranova' ),
 			'textbox' => 'Using the built-in WordPress Customizer you can change colors, fonts, text, buttons and upload your own logo for the footer and the header area.',
 			'url'     => get_home_url(),
 			'icon'    => 'fa-gears',
 
 		);
 		$feature_widget[4] = array(
-			'title'   => __( 'Coded With Care', 'Serranova' ),
-			'textbox' => 'We have coded the Serranova theme to be fast loading, with no bloated extras and it complies with all the latest WordPress theme requirements.',
+			'title'   => __( 'Coded With Care', 'serranova' ),
+			'textbox' => 'We have coded the serranova theme to be fast loading, with no bloated extras and it complies with all the latest WordPress theme requirements.',
 			'url'     => get_home_url(),
 			'icon'    => 'fa-file-code-o',
 
 		);
-		$active_sidebars['Serranova-features'] = array( 'Serranova-feature-widget-1', 'Serranova-feature-widget-2', 'Serranova-feature-widget-3', 'Serranova-feature-widget-4' );
-		update_option( 'widget_Serranova-feature-widget', $feature_widget );
+		$active_sidebars['serranova-features'] = array( 'serranova-feature-widget-1', 'serranova-feature-widget-2', 'serranova-feature-widget-3', 'serranova-feature-widget-4' );
+		update_option( 'widget_serranova-feature-widget', $feature_widget );
 		update_option( 'sidebars_widgets', $active_sidebars );
 
 		// set customizer options
-		set_theme_mod( 'Serranova_header_logo_image', get_template_directory_uri() . '/images/logo.png' );
-		set_theme_mod( 'Serranova_header_logo_show', 'logo' );
-		set_theme_mod( 'Serranova_footer_logo_image', get_template_directory_uri() . '/images/logo-footer.png' );
-		set_theme_mod( 'Serranova_footer_logo_show', 'yes' );
-		set_theme_mod( 'Serranova_header_logo_text', get_bloginfo( 'name' ) );
-		set_theme_mod( 'Serranova_hero_show', 'yes' );
-		set_theme_mod( 'Serranova_hero_image', get_template_directory_uri() . '/images/header.jpg' );
-		set_theme_mod( 'Serranova_hero_title', 'Serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.' );
-		set_theme_mod( 'Serranova_hero_text', 'Clean code, WordPress standards and no bloating, guaranteed..' );
-		set_theme_mod( 'Serranova_hero_overlay_enabled', 'yes' );
-		set_theme_mod( 'Serranova_hero_overlay_opacity', 90 );
+		set_theme_mod( 'serranova_header_logo_image', get_template_directory_uri() . '/images/logo.png' );
+		set_theme_mod( 'serranova_header_logo_show', 'logo' );
+		set_theme_mod( 'serranova_footer_logo_image', get_template_directory_uri() . '/images/logo-footer.png' );
+		set_theme_mod( 'serranova_footer_logo_show', 'yes' );
+		set_theme_mod( 'serranova_header_logo_text', get_bloginfo( 'name' ) );
+		set_theme_mod( 'serranova_hero_show', 'yes' );
+		set_theme_mod( 'serranova_hero_image', get_template_directory_uri() . '/images/mobile.png' );
+		set_theme_mod( 'serranova_hero_title', 'serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.' );
+		set_theme_mod( 'serranova_hero_text', 'Clean code, WordPress standards and no bloating, guaranteed..' );
 
-		set_theme_mod( 'Serranova_hero_button1_text', __( 'Learn More', 'Serranova' ) );
-		set_theme_mod( 'Serranova_hero_button2_text', __( 'Contact us', 'Serranova' ) );
+		set_theme_mod( 'serranova_hero_button1_text', __( 'Learn More', 'serranova' ) );
+		set_theme_mod( 'serranova_hero_button2_text', __( 'Contact us', 'serranova' ) );
 
-		set_theme_mod( 'Serranova_content_set', true );
+		set_theme_mod( 'serranova_content_set', true );
 	}
 }
 
-add_action( 'after_switch_theme', 'Serranova_set_sample_content', 100 );
+add_action( 'after_switch_theme', 'serranova_set_sample_content', 100 );
 
 // Style the Tag Cloud
-function Serranova_tag_cloud_widget( $args )
+function serranova_tag_cloud_widget( $args )
 {
 	$args['largest'] = 12; //largest tag
 	$args['smallest'] = 12; //smallest tag
@@ -241,7 +239,7 @@ function Serranova_tag_cloud_widget( $args )
 	return $args;
 }
 
-add_filter( 'widget_tag_cloud_args', 'Serranova_tag_cloud_widget' );
+add_filter( 'widget_tag_cloud_args', 'serranova_tag_cloud_widget' );
 
 
 /**
@@ -249,10 +247,10 @@ add_filter( 'widget_tag_cloud_args', 'Serranova_tag_cloud_widget' );
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function Serranova_widgets_init()
+function serranova_widgets_init()
 {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'Serranova' ),
+		'name'          => __( 'Sidebar', 'serranova' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<div class="sidebarwidget">',
@@ -262,8 +260,8 @@ function Serranova_widgets_init()
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer', 'Serranova' ),
-		'id'            => 'Serranova-footer',
+		'name'          => __( 'Footer', 'serranova' ),
+		'id'            => 'serranova-footer',
 		'before_widget' => '<div class="col-1-4"><div class="wrap-col"><div class="footerwidget">',
 		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -271,8 +269,8 @@ function Serranova_widgets_init()
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Features', 'Serranova' ),
-		'id'            => 'Serranova-features',
+		'name'          => __( 'Features', 'serranova' ),
+		'id'            => 'serranova-features',
 		'before_widget' => '<div class="col-1-4"><div class="wrap-col"><div class="featurewidget">',
 		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<h2 class="featurewidgettitle">',
@@ -281,19 +279,19 @@ function Serranova_widgets_init()
 
 }
 
-add_action( 'widgets_init', 'Serranova_widgets_init' );
+add_action( 'widgets_init', 'serranova_widgets_init' );
 
 // Load Roboto Font
-function Serranova_fonts_url()
+function serranova_fonts_url()
 {
 	$fonts_url = '';
 	$font_families = array();
 
 	// default fonts - Roboto and Arimo
-	$roboto = _x( 'on', 'Roboto font: on or off', 'Serranova' );
-	$arimo = _x( 'on', 'Arimo font: on or off', 'Serranova' );
-	$heading_font_family = get_theme_mod( 'Serranova_google_fonts_heading_font', null );
-	$body_font_family = get_theme_mod( 'Serranova_google_fonts_body_font', null );
+	$roboto = _x( 'on', 'Roboto font: on or off', 'serranova' );
+	$arimo = _x( 'on', 'Arimo font: on or off', 'serranova' );
+	$heading_font_family = get_theme_mod( 'serranova_google_fonts_heading_font', null );
+	$body_font_family = get_theme_mod( 'serranova_google_fonts_body_font', null );
 
 	if ( 'off' !== $roboto ) {
 		$font_families[] = 'Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic';
@@ -304,14 +302,14 @@ function Serranova_fonts_url()
 	}
 
 	if ( !empty( $heading_font_family ) && $heading_font_family !== 'none' ) {
-		$heading_font = _x( 'on', $heading_font_family . ' font: on or off', 'Serranova' );
+		$heading_font = _x( 'on', $heading_font_family . ' font: on or off', 'serranova' );
 		if ( 'off' !== $heading_font ) {
 			$font_families[] = $heading_font_family;
 		}
 	}
 
 	if ( !empty( $body_font_family ) && $body_font_family !== 'none' && $body_font_family !== $heading_font_family ) {
-		$body_font = _x( 'on', $body_font_family . ' font: on or off', 'Serranova' );
+		$body_font = _x( 'on', $body_font_family . ' font: on or off', 'serranova' );
 		if ( 'off' !== $body_font ) {
 			$font_families[] = $body_font_family;
 		}
@@ -339,21 +337,21 @@ function Serranova_fonts_url()
 /**
  * Enqueue scripts and styles.
  */
-function Serranova_scripts()
+function serranova_scripts()
 {
-	wp_enqueue_style( 'Serranova-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'Serranova-font-awesome', get_template_directory_uri() . '/inc/css/font-awesome.min.css' );
-	wp_enqueue_style( 'Serranova-fonts', Serranova_fonts_url(), array(), null );
-	wp_enqueue_script( 'Serranova-footer-scripts', get_template_directory_uri() . '/inc/js/script.js', array( 'jquery' ), '20151107', true );
-	wp_enqueue_script( 'Serranova-widget-author-box', get_template_directory_uri() . '/inc/js/widget-author-box.js', array( 'jquery' ), '20151107', true );
-	wp_enqueue_script( 'Serranova-widget-popular-recent', get_template_directory_uri() . '/inc/js/popular-recent.js', array( 'jquery' ), '20151107', true );
+	wp_enqueue_style( 'serranova-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'serranova-font-awesome', get_template_directory_uri() . '/inc/css/font-awesome.min.css' );
+	wp_enqueue_style( 'serranova-fonts', serranova_fonts_url(), array(), null );
+	wp_enqueue_script( 'serranova-footer-scripts', get_template_directory_uri() . '/inc/js/script.js', array( 'jquery' ), '20151107', true );
+	wp_enqueue_script( 'serranova-widget-author-box', get_template_directory_uri() . '/inc/js/widget-author-box.js', array( 'jquery' ), '20151107', true );
+	wp_enqueue_script( 'serranova-widget-popular-recent', get_template_directory_uri() . '/inc/js/popular-recent.js', array( 'jquery' ), '20151107', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'Serranova_scripts' );
+add_action( 'wp_enqueue_scripts', 'serranova_scripts' );
 
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis) and sets character length to 35
@@ -364,12 +362,12 @@ add_action( 'wp_enqueue_scripts', 'Serranova_scripts' );
  * @param int $length Excerpt length.
  * @return int (Maybe) modified excerpt length.
  */
-function Serranova_custom_excerpt_length( $length )
+function serranova_custom_excerpt_length( $length )
 {
 	return 20;
 }
 
-add_filter( 'excerpt_length', 'Serranova_custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'serranova_custom_excerpt_length', 999 );
 
 /**
  * Filter the excerpt "read more" string.
@@ -377,19 +375,19 @@ add_filter( 'excerpt_length', 'Serranova_custom_excerpt_length', 999 );
  * @param string $more "Read more" excerpt string.
  * @return string (Maybe) modified "read more" excerpt string.
  */
-function Serranova_excerpt_more( $more )
+function serranova_excerpt_more( $more )
 {
 	return '';
 }
 
-add_filter( 'excerpt_more', 'Serranova_excerpt_more' );
+add_filter( 'excerpt_more', 'serranova_excerpt_more' );
 
-function Serranova_esc_html( $text )
+function serranova_esc_html( $text )
 {
 	return strip_tags( $text, '<p><a><i><br><strong><b><em><ul><li><ol><span><h1><h2><h3><h4>' );
 }
 
-function Serranova_pagination( $wp_query_object = null )
+function serranova_pagination( $wp_query_object = null )
 {
 	global $wp_query;
 	$query_object = !empty( $wp_query_object ) ? $wp_query_object : $wp_query;

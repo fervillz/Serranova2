@@ -4,16 +4,16 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Serranova
+ * @package serranova
  */
 
-if ( !function_exists( 'Serranova_the_posts_navigation' ) ) :
+if ( !function_exists( 'serranova_the_posts_navigation' ) ) :
 	/**
 	 * Display navigation to next/previous set of posts when applicable.
 	 *
 	 * @todo Remove this function when WordPress 4.3 is released.
 	 */
-	function Serranova_the_posts_navigation()
+	function serranova_the_posts_navigation()
 	{
 		// Don't print empty markup if there's only one page.
 		if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
@@ -21,16 +21,16 @@ if ( !function_exists( 'Serranova_the_posts_navigation' ) ) :
 		}
 		?>
 		<nav class="navigation posts-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'Serranova' ); ?></h2>
+			<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'serranova' ); ?></h2>
 
 			<div class="nav-links">
 
 				<?php if ( get_next_posts_link() ) : ?>
-					<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'Serranova' ) ); ?></div>
+					<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'serranova' ) ); ?></div>
 				<?php endif; ?>
 
 				<?php if ( get_previous_posts_link() ) : ?>
-					<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'Serranova' ) ); ?></div>
+					<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'serranova' ) ); ?></div>
 				<?php endif; ?>
 
 			</div>
@@ -40,13 +40,13 @@ if ( !function_exists( 'Serranova_the_posts_navigation' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'Serranova_the_post_navigation' ) ) :
+if ( !function_exists( 'serranova_the_post_navigation' ) ) :
 	/**
 	 * Display navigation to next/previous post when applicable.
 	 *
 	 * @todo Remove this function when WordPress 4.3 is released.
 	 */
-	function Serranova_the_post_navigation()
+	function serranova_the_post_navigation()
 	{
 		// Don't print empty markup if there's nowhere to navigate.
 		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
@@ -57,7 +57,7 @@ if ( !function_exists( 'Serranova_the_post_navigation' ) ) :
 		}
 		?>
 		<nav class="navigation post-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'Serranova' ); ?></h2>
+			<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'serranova' ); ?></h2>
 
 			<div class="nav-links">
 				<?php
@@ -71,7 +71,7 @@ if ( !function_exists( 'Serranova_the_post_navigation' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'Serranova_the_archive_title' ) ) :
+if ( !function_exists( 'serranova_the_archive_title' ) ) :
 	/**
 	 * Shim for `the_archive_title()`.
 	 *
@@ -82,48 +82,48 @@ if ( !function_exists( 'Serranova_the_archive_title' ) ) :
 	 * @param string $before Optional. Content to prepend to the title. Default empty.
 	 * @param string $after Optional. Content to append to the title. Default empty.
 	 */
-	function Serranova_the_archive_title( $before = '', $after = '' )
+	function serranova_the_archive_title( $before = '', $after = '' )
 	{
 		if ( is_category() ) {
-			$title = sprintf( __( 'Category: %s', 'Serranova' ), single_cat_title( '', false ) );
+			$title = sprintf( __( 'Category: %s', 'serranova' ), single_cat_title( '', false ) );
 		} elseif ( is_tag() ) {
-			$title = sprintf( __( 'Tag: %s', 'Serranova' ), single_tag_title( '', false ) );
+			$title = sprintf( __( 'Tag: %s', 'serranova' ), single_tag_title( '', false ) );
 		} elseif ( is_author() ) {
-			$title = sprintf( __( 'Author: %s', 'Serranova' ), '<span class="vcard">' . get_the_author() . '</span>' );
+			$title = sprintf( __( 'Author: %s', 'serranova' ), '<span class="vcard">' . get_the_author() . '</span>' );
 		} elseif ( is_year() ) {
-			$title = sprintf( __( 'Year: %s', 'Serranova' ), get_the_date( _x( 'Y', 'yearly archives date format', 'Serranova' ) ) );
+			$title = sprintf( __( 'Year: %s', 'serranova' ), get_the_date( _x( 'Y', 'yearly archives date format', 'serranova' ) ) );
 		} elseif ( is_month() ) {
-			$title = sprintf( __( 'Month: %s', 'Serranova' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'Serranova' ) ) );
+			$title = sprintf( __( 'Month: %s', 'serranova' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'serranova' ) ) );
 		} elseif ( is_day() ) {
-			$title = sprintf( __( 'Day: %s', 'Serranova' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'Serranova' ) ) );
+			$title = sprintf( __( 'Day: %s', 'serranova' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'serranova' ) ) );
 		} elseif ( is_tax( 'post_format' ) ) {
 			if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-				$title = _x( 'Asides', 'post format archive title', 'Serranova' );
+				$title = _x( 'Asides', 'post format archive title', 'serranova' );
 			} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-				$title = _x( 'Galleries', 'post format archive title', 'Serranova' );
+				$title = _x( 'Galleries', 'post format archive title', 'serranova' );
 			} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-				$title = _x( 'Images', 'post format archive title', 'Serranova' );
+				$title = _x( 'Images', 'post format archive title', 'serranova' );
 			} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-				$title = _x( 'Videos', 'post format archive title', 'Serranova' );
+				$title = _x( 'Videos', 'post format archive title', 'serranova' );
 			} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-				$title = _x( 'Quotes', 'post format archive title', 'Serranova' );
+				$title = _x( 'Quotes', 'post format archive title', 'serranova' );
 			} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-				$title = _x( 'Links', 'post format archive title', 'Serranova' );
+				$title = _x( 'Links', 'post format archive title', 'serranova' );
 			} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-				$title = _x( 'Statuses', 'post format archive title', 'Serranova' );
+				$title = _x( 'Statuses', 'post format archive title', 'serranova' );
 			} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-				$title = _x( 'Audio', 'post format archive title', 'Serranova' );
+				$title = _x( 'Audio', 'post format archive title', 'serranova' );
 			} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-				$title = _x( 'Chats', 'post format archive title', 'Serranova' );
+				$title = _x( 'Chats', 'post format archive title', 'serranova' );
 			}
 		} elseif ( is_post_type_archive() ) {
-			$title = sprintf( __( 'Archives: %s', 'Serranova' ), post_type_archive_title( '', false ) );
+			$title = sprintf( __( 'Archives: %s', 'serranova' ), post_type_archive_title( '', false ) );
 		} elseif ( is_tax() ) {
 			$tax = get_taxonomy( get_queried_object()->taxonomy );
 			/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
-			$title = sprintf( __( '%1$s: %2$s', 'Serranova' ), $tax->labels->singular_name, single_term_title( '', false ) );
+			$title = sprintf( __( '%1$s: %2$s', 'serranova' ), $tax->labels->singular_name, single_term_title( '', false ) );
 		} else {
-			$title = __( 'Archives', 'Serranova' );
+			$title = __( 'Archives', 'serranova' );
 		}
 
 		/**
@@ -139,7 +139,7 @@ if ( !function_exists( 'Serranova_the_archive_title' ) ) :
 	}
 endif;
 
-if ( !function_exists( 'Serranova_the_archive_description' ) ) :
+if ( !function_exists( 'serranova_the_archive_description' ) ) :
 	/**
 	 * Shim for `the_archive_description()`.
 	 *
@@ -150,7 +150,7 @@ if ( !function_exists( 'Serranova_the_archive_description' ) ) :
 	 * @param string $before Optional. Content to prepend to the description. Default empty.
 	 * @param string $after Optional. Content to append to the description. Default empty.
 	 */
-	function Serranova_the_archive_description( $before = '', $after = '' )
+	function serranova_the_archive_description( $before = '', $after = '' )
 	{
 		$description = apply_filters( 'get_the_archive_description', term_description() );
 
@@ -172,9 +172,9 @@ endif;
  *
  * @return bool
  */
-function Serranova_categorized_blog()
+function serranova_categorized_blog()
 {
-	if ( false === ( $all_the_cool_cats = get_transient( 'Serranova_categories' ) ) ) {
+	if ( false === ( $all_the_cool_cats = get_transient( 'serranova_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -187,29 +187,29 @@ function Serranova_categorized_blog()
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'Serranova_categories', $all_the_cool_cats );
+		set_transient( 'serranova_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so Serranova_categorized_blog should return true.
+		// This blog has more than 1 category so serranova_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so Serranova_categorized_blog should return false.
+		// This blog has only 1 category so serranova_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in Serranova_categorized_blog.
+ * Flush out the transients used in serranova_categorized_blog.
  */
-function Serranova_category_transient_flusher()
+function serranova_category_transient_flusher()
 {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'Serranova_categories' );
+	delete_transient( 'serranova_categories' );
 }
 
-add_action( 'edit_category', 'Serranova_category_transient_flusher' );
-add_action( 'save_post', 'Serranova_category_transient_flusher' );
+add_action( 'edit_category', 'serranova_category_transient_flusher' );
+add_action( 'save_post', 'serranova_category_transient_flusher' );

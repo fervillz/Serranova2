@@ -2,7 +2,7 @@
 /**
  * Template Name: Full Page template
  *
- * @package Serranova
+ * @package serranova
  */
  
 

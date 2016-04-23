@@ -1,9 +1,9 @@
 <?php
 
-function Serranova_load_theme_fonts()
+function serranova_load_theme_fonts()
 {
-	$heading = get_theme_mod( 'Serranova_google_fonts_heading_font' );
-	$body = get_theme_mod( 'Serranova_google_fonts_body_font' );
+	$heading = get_theme_mod( 'serranova_google_fonts_heading_font' );
+	$body = get_theme_mod( 'serranova_google_fonts_body_font' );
 	if ( ( !empty( $heading ) && $heading != 'none' ) || ( !empty( $body ) && $body != 'none' ) ) {
 		echo '<style type="text/css">';
 		$imports = array();
@@ -23,18 +23,18 @@ function Serranova_load_theme_fonts()
 
 	}
 }
-add_action( 'wp_head', 'Serranova_load_theme_fonts' );
+add_action( 'wp_head', 'serranova_load_theme_fonts' );
 
 // load colors
-function Serranova_load_theme_colors()
+function serranova_load_theme_colors()
 {
 
-	$bodyBackgroundColor = get_theme_mod( 'Serranova_body_background_color', '#ffffff;' );
-	$accentColor = get_theme_mod( 'Serranova_accent_color', '#bbf3cc' );
-	$heroImageOverlayColor = get_theme_mod( 'Serranova_hero_overlay_color', '#1f242d' );
-	$heroImageOverlayOpacity = get_theme_mod( 'Serranova_hero_overlay_opacity', '90' );
-	$heroImageBlur = get_theme_mod( 'Serranova_hero_blur_enabled', '0' );
-	$hero_image_bg = get_theme_mod( 'Serranova_hero_image' );
+	$bodyBackgroundColor = get_theme_mod( 'serranova_body_background_color', '#ffffff;' );
+	$accentColor = get_theme_mod( 'serranova_accent_color', '#bbf3cc' );
+	$heroImageOverlayColor = get_theme_mod( 'serranova_hero_overlay_color', '#1f242d' );
+	$heroImageOverlayOpacity = get_theme_mod( 'serranova_hero_overlay_opacity', '90' );
+	$heroImageBlur = get_theme_mod( 'serranova_hero_blur_enabled', '0' );
+	$hero_image_bg = get_theme_mod( 'serranova_hero_image' );
 	echo '<style type="text/css">';
 
 	if ( !empty( $bodyBackgroundColor ) ) {
@@ -67,4 +67,4 @@ function Serranova_load_theme_colors()
 	echo '</style>';
 }
 
-add_action( 'wp_head', 'Serranova_load_theme_colors' );
+add_action( 'wp_head', 'serranova_load_theme_colors' );

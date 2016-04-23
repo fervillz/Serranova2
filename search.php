@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package Serranova
+ * @package serranova
  */
 
 get_header('archives');
@@ -30,7 +30,7 @@ if ( have_posts() ) :
 
  
  
-<?php Serranova_pagination(); ?>
+<?php serranova_pagination(); ?>
 
 </div><!-- End Wrapper -->
 </div><!-- End Wrapper -->

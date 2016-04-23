@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Serranova
+ * @package serranova
  */
 ?>
 <div class="col-1-3">
@@ -9,7 +9,7 @@
       <div <?php post_class( 'blogpost' ); ?>>
       <div class="blogimage">
        <a href="<?php the_permalink();?>" class="blogimagelink"><?php if ( has_post_thumbnail() ) {
-							the_post_thumbnail( 'Serranova-frontpage-news', array( 'class' => '' ) );
+							the_post_thumbnail( 'serranova-frontpage-news', array( 'class' => '' ) );
 								} else { ?>
 								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/default.gif" alt="<?php the_title(); ?>" />
 						<?php } ?><i class="fa fa-chevron-right"></i></a>

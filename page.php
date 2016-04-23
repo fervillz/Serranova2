@@ -2,7 +2,7 @@
 /**
  * The page template file.
  *
- * @package Serranova
+ * @package serranova
  */
 
 get_header('');

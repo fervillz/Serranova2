@@ -1,13 +1,13 @@
 <?php
 /**
- * @package Serranova
+ * @package serranova
  */
 ?>
 
 <div class="row">
 		<div class="col-2-3"><div class="wrap-col test postcontent">
         
-    <?php the_post_thumbnail( 'Serranova-full' ); ?>
+    <?php the_post_thumbnail( 'serranova-full' ); ?>
         <div id="content">
 
 
@@ -20,11 +20,11 @@
 <?php
 		the_content();
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'Serranova' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'serranova' ),
 			'after'  => '</div>',
 		) );
 		
-		edit_post_link( __( 'Edit', 'Serranova' ), '<span class="edit-link">', '</span>' );
+		edit_post_link( __( 'Edit', 'serranova' ), '<span class="edit-link">', '</span>' );
 		?>
         <br>
 </div>

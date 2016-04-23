@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Serranova
+ * @package serranova
  */
 
 ?>
@@ -24,7 +24,7 @@ the_post();
       <div class="blogpost">
       <div class="blogimage">
        <a href="<?php the_permalink();?>" class="blogimagelink"><?php if ( has_post_thumbnail() ) {
-							the_post_thumbnail( 'Serranova-blog-thumb', array( 'class' => 'Serranova-featured-image' ) );
+							the_post_thumbnail( 'serranova-blog-thumb', array( 'class' => 'serranova-featured-image' ) );
 								} else { ?>
 								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/default.gif" alt="<?php the_title(); ?>" />
 						<?php } ?><i class="fa fa-chevron-right"></i></a>
@@ -44,7 +44,7 @@ the_post();
 
  
  
- <?php Serranova_pagination(); ?>
+ <?php serranova_pagination(); ?>
 
 </div><!-- End Wrapper -->
 </div><!-- End Wrapper -->

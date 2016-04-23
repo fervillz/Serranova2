@@ -4,7 +4,7 @@
  *
  * The main template file.
  *
- * @package Serranova
+ * @package serranova
  */
 
 get_header();
@@ -19,7 +19,7 @@ get_header();
 				get_template_part( 'inc/partials/content', 'home-posts' );
 
 			endwhile;
-			Serranova_pagination();
+			serranova_pagination();
 
 		else :
 			get_template_part( 'inc/partials/content', 'none' );

@@ -2,7 +2,7 @@
 /**
  * The single post template file.
  *
- * @package Serranova
+ * @package serranova
  */
 
 

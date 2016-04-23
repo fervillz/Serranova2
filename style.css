@@ -1,16 +1,16 @@
 /* ===============
-   Serranova
+   serranova
    =============== */
 /*
-Theme Name: Serranova
-Theme URI: http://wplift.com/themes/downloads/Serranova
+Theme Name: serranova
+Theme URI: http://wplift.com/themes/downloads/serranova
 Author: WPLift
 Author URI: http://wplift.com
-Description: Serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.
+Description: serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: Serranova
+Text Domain: serranova
 Tags: responsive-layout, right-sidebar, dark, black, gray, blue, white, one-column, two-columns, fixed-layout,light,sticky-post,theme-options,custom-background, custom-menu, featured-images, threaded-comments, translation-ready, photoblogging
 
 This theme, like WordPress, is licensed under the GPL.
@@ -339,7 +339,7 @@ h1.site-title:hover {
 	position: relative;
 }
 
-.blogimage .Serranova-featured-image {
+.blogimage .serranova-featured-image {
 	height: auto;
 }
 

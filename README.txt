@@ -1,10 +1,10 @@
 ===============
-Serranova
+serranova
 ===============
 
 Description
 ===============
-Serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.
+serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.
 
 Visit http://themefurnace.com to upgrade for $49 for 17 more themes, support and more theme features.
 

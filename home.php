@@ -4,7 +4,7 @@
  *
  * The main template file.
  *
- * @package Serranova
+ * @package serranova
  */
 
 get_header();

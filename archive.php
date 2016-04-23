@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Serranova
+ * @package serranova
  */
 
 get_header('archives');
@@ -26,7 +26,7 @@ the_post();
 
  
  
-<?php Serranova_pagination(); ?>
+<?php serranova_pagination(); ?>
 
 </div><!-- End Wrapper -->
 </div><!-- End Wrapper -->

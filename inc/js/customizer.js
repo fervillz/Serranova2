@@ -19,7 +19,7 @@
 				});
 		});
 		// header logo
-		wp.customize('Serranova_header_logo_show', function(value) {
+		wp.customize('serranova_header_logo_show', function(value) {
 				value.bind(function(to) {
 						if (to === 'text') {
 								$('#site-branding h1, #site-branding span').show();
@@ -33,137 +33,98 @@
 				});
 		});
 
-		// Serranova header logo image
-		wp.customize('Serranova_header_logo_image', function(value) {
+		// serranova header logo image
+		wp.customize('serranova_header_logo_image', function(value) {
 				value.bind(function(to) {
 						$('#site-branding img').attr('src', to);
 				});
 		});
 
-		// Serranova hero banner
-		wp.customize('Serranova_hero_show', function(value) {
+		// serranova hero banner
+		wp.customize('serranova_hero_show', function(value) {
 				value.bind(function(to) {
 						return to === 'yes' ? $('#hero').show() : $('#hero').hide();
 				});
 		});
 
-		// Serranova hero banner bg image
-		wp.customize('Serranova_hero_image', function(value) {
+		// serranova hero banner bg image
+		wp.customize('serranova_hero_image', function(value) {
 				value.bind(function(to) {
 						$('#hero .hero-image img').attr('src', to);
 				});
 		});
 
-		// Serranova hero banner title
-		wp.customize('Serranova_hero_title', function(value) {
+		// serranova hero banner title
+		wp.customize('serranova_hero_title', function(value) {
 				value.bind(function(to) {
 						$('#hero h2').text(to);
 				});
 		});
 
-		// Serranova hero banner text
-		wp.customize('Serranova_hero_text', function(value) {
+		// serranova hero banner text
+		wp.customize('serranova_hero_text', function(value) {
 				value.bind(function(to) {
 						$('#hero .herotext').html(to);
 				});
 		});
 
-		// Serranova hero button 1 show/hide
-		wp.customize('Serranova_hero_button1_show', function(value) {
+		// serranova hero button 1 show/hide
+		wp.customize('serranova_hero_button1_show', function(value) {
 				value.bind(function(to) {
 						return to === 'yes' ? $('.button.green').show() : $('.button.green').hide();
 				});
 		});
 
-		// Serranova hero button 1 text
-		wp.customize('Serranova_hero_button1_text', function(value) {
+		// serranova hero button 1 text
+		wp.customize('serranova_hero_button1_text', function(value) {
 				value.bind(function(to) {
 						$('.herobuttons a:first-child').text(to);
 				});
 		});
 
-		// Serranova hero button 1 link
-		wp.customize('Serranova_hero_button1_link', function(value) {
+		// serranova hero button 1 link
+		wp.customize('serranova_hero_button1_link', function(value) {
 				value.bind(function(to) {
 						$('.herobuttons a:first-child').attr('href', encodeURI(to));
 				});
 		});
 
-		// Serranova hero button 2 show/hide
-		wp.customize('Serranova_hero_button2_show', function(value) {
+		// serranova hero button 2 show/hide
+		wp.customize('serranova_hero_button2_show', function(value) {
 				value.bind(function(to) {
 						return to === 'yes' ? $('.button.seethrough').show() : $('.button.seethrough').hide();
 				});
 		});
 
-		// Serranova hero button 2 text
-		wp.customize('Serranova_hero_button2_text', function(value) {
+		// serranova hero button 2 text
+		wp.customize('serranova_hero_button2_text', function(value) {
 				value.bind(function(to) {
 						$('.herobuttons a:last-child').text(to);
 				});
 		});
 
-		// Serranova hero button 2 link
-		wp.customize('Serranova_hero_button2_link', function(value) {
+		// serranova hero button 2 link
+		wp.customize('serranova_hero_button2_link', function(value) {
 				value.bind(function(to) {
 						$('.herobuttons a:last-child').attr('href', encodeURI(to));
 				});
 		});
 
-		//Serranova hero overlay
-		wp.customize('Serranova_hero_overlay_enabled', function(value) {
-				value.bind(function(to) {
-						$('.hero-overlay').hide();
-						if (to === 'yes') {
-								$('.hero-overlay').show();
-						}
-				});
-		});
-
-		//Serranova hero overlay color
-		wp.customize('Serranova_hero_overlay_color', function(value) {
-				value.bind(function(to) {
-						if (to !== 'blank') {
-								$('.hero-overlay').css({ 'background-color': to });
-						} else {
-								$('.hero-overlay').css({ 'background-color': undefined });
-						}
-				});
-		});
-
-		//Serranova hero overlay opacity
-		wp.customize('Serranova_hero_overlay_opacity', function(value) {
-				value.bind(function(to) {
-						if (to !== 'blank') {
-								$('.hero-overlay').css({ 'opacity': to / 100 });
-						} else {
-								$('.hero-overlay').css({ 'opacity': undefined });
-						}
-				});
-		});
-
-		// Serranova hero blur
-		wp.customize('Serranova_hero_blur_enabled', function(value) {
-				value.bind(function(to) {
-						$('.hero-bg').css({ 'filter': 'blur(' + to + 'px)', '-webkit-filter': 'blur(' + to + 'px)' });
-				});
-		});
-
-		// Serranova footer logo show/hide
-		wp.customize('Serranova_footer_logo_show', function(value) {
+		// serranova footer logo show/hide
+		wp.customize('serranova_footer_logo_show', function(value) {
 				value.bind(function(to) {
 						return to === 'yes' ? $('#footer #bottom .wrapper > a').show().children('a').attr('href', to) : $('#footer #bottom .wrapper > a').hide();
 				});
 		});
 
-		// Serranova footer logo image
-		wp.customize('Serranova_footer_logo_image', function(value) {
+		// serranova footer logo image
+		wp.customize('serranova_footer_logo_image', function(value) {
 				value.bind(function(to) {
 						$('#footer a img.bottomlogo').attr('src', to);
 				});
 		});
 
-		//Serranova_google_fonts_heading_font
+		//serranova_google_fonts_heading_font
 
 		// Background color.
 		wp.customize('background_color', function(value) {
@@ -184,7 +145,7 @@
 		});
 
 		// google fonts
-		wp.customize('Serranova_google_fonts_body_font', function(value) {
+		wp.customize('serranova_google_fonts_body_font', function(value) {
 				value.bind(function(to) {
 						var font = to.replace(' ', '+');
 						WebFontConfig = {
@@ -219,7 +180,7 @@
 						}
 				});
 		});
-		wp.customize('Serranova_google_fonts_heading_font', function(value) {
+		wp.customize('serranova_google_fonts_heading_font', function(value) {
 				value.bind(function(to) {
 						var font = to.replace(' ', '+');
 						WebFontConfig = {
@@ -256,14 +217,14 @@
 		});
 
 		// colors
-		wp.customize('Serranova_accent_color', function(value) {
+		wp.customize('serranova_accent_color', function(value) {
 				value.bind(function(to) {
 						if ('blank' === to) {
 								// bg - .search input.submit, .tab_head li:hover, .tab_head li.active, .banner_left a.contact, .read_more, .pagination a, .pagination span
 								$('.search input.submit, .tab_head li:hover, .tab_head li.active, #hero .green, .blogimage .fa, .blogpostmeta .fa, .featurewidgeticon .fa, .socialmediamenu .fa, .pagination a, .pagination span, .profile_cont .fa').css({});
-								$('body #Serranova-selection-styles').remove();
+								$('body #serranova-selection-styles').remove();
 						} else {
-								$('body').append('<style id="Serranova-selection-styles">::selection {background: ' + to + '}</style>')
+								$('body').append('<style id="serranova-selection-styles">::selection {background: ' + to + '}</style>')
 								$('.block_cont_in ul li .fa-folder-open-o, .block_cont_in ul li .fa-calendar-check-o, .block_cont_in ul li .fa-comments-o, .profile_cont .fa, .comment-body a, #respond a, .post-edit-link, .authormeta a').css({
 										'color': to
 								});
