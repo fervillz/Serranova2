@@ -30,7 +30,7 @@ function Serranova_load_theme_colors()
 {
 
 	$bodyBackgroundColor = get_theme_mod( 'Serranova_body_background_color', '#ffffff;' );
-	$accentColor = get_theme_mod( 'Serranova_accent_color', '#0ea6f2' );
+	$accentColor = get_theme_mod( 'Serranova_accent_color', '#bbf3cc' );
 	$heroImageOverlayColor = get_theme_mod( 'Serranova_hero_overlay_color', '#1f242d' );
 	$heroImageOverlayOpacity = get_theme_mod( 'Serranova_hero_overlay_opacity', '90' );
 	$heroImageBlur = get_theme_mod( 'Serranova_hero_blur_enabled', '0' );

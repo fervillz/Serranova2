@@ -4,7 +4,7 @@ Serranova
 
 Description
 ===============
-Serranova is a nice modern looking WordPress theme which is suitable for business sites, personal blogs and you can also use it with the Free WooCommerce plugin to create your own eCommerce site. It is super simple to setup with some nice options controlled using the Live Customizer.
+Serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.
 
 Visit http://themefurnace.com to upgrade for $49 for 17 more themes, support and more theme features.
 

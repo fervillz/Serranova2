@@ -576,7 +576,7 @@ function Serranova_customizer( $wp_customize )
 	// colors
 
 	$wp_customize->add_setting( 'Serranova_accent_color', array(
-		'default'           => '#0ea6f2',
+		'default'           => '#bbf3cc',
 		'type'              => 'theme_mod',
 		'capability'        => 'edit_theme_options',
 		'transport'         => 'postMessage',

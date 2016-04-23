@@ -6,7 +6,7 @@ Theme Name: Serranova
 Theme URI: http://wplift.com/themes/downloads/Serranova
 Author: WPLift
 Author URI: http://wplift.com
-Description: Serranova is a nice modern looking WordPress theme which is suitable for business sites, personal blogs and you can also use it with the Free WooCommerce plugin to create your own eCommerce site. It is super simple to setup with some nice options controlled using the Live Customizer.
+Description: Serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -64,7 +64,7 @@ body {
    =============== */
    
 a {
-	color: #0ea6f2;
+	color: #bbf3cc;
 	text-decoration: none
 }
 
@@ -77,8 +77,7 @@ a:hover {
    =============== */
 
 header {
-	background-color: #171a1e;
-	border-bottom:1px solid #2f3947;
+	    background-color: #ffffff;
 	margin: 0px;
 	font-weight: 400;
 	padding-top: 25px;
@@ -98,14 +97,14 @@ header {
 }
 h1.site-title {
 	color: #fff;
-	border-bottom: 1px solid #0ea6f2;
+	border-bottom: 1px solid #bbf3cc;
 	transition: all 0.3s ease-out;
 }
 h1.site-title:hover {
 	border-bottom: 1px solid #fff;
 }
 .site-title i {
-	color: #0ea6f2;
+	color: #bbf3cc;
 	font-size: 20px;
 }
 .site-description {
@@ -115,7 +114,7 @@ h1.site-title:hover {
 	float: left;
 	margin-top: 5px;
 	margin-left: 10px;
-	color: #a5a5a5;
+	color: #a1a1a1;
 }
 #hero {
 	margin-bottom: 0px;
@@ -123,8 +122,8 @@ h1.site-title:hover {
 	padding-bottom: 100px;
 	overflow: hidden;
 	position: relative;
-	text-align: center;
-	border-bottom:15px solid #efefef;
+	text-align: left;
+	border-bottom: 30px solid #bbf3cc;
 }
 #hero .hero-bg {
 	position: absolute;
@@ -144,7 +143,7 @@ h1.site-title:hover {
 	color: #fff;
 }
 #hero i {
-	color: #0ea6f2;
+	color: #bbf3cc;
 	font-size: 20px;
 }
 .herotext {
@@ -157,13 +156,14 @@ h1.site-title:hover {
 	color: #ccc;
 }
 .herotext a {
-	color: #0ea6f2;
+	color: #bbf3cc;
 }
 .herotext a:hover {
 	color: #fff;
 }
 .herobuttons {
 	padding-top: 50px;
+	padding-left: 20px;
 }
 .herobuttons .fa {
 	color: #fff!important;
@@ -247,13 +247,13 @@ h1.site-title:hover {
 .featurewidgeticon:hover {
 }
 .featurewidgeticon a {
-	color: #0ea6f2;
+	color: #bbf3cc;
 	display: block;
 	width: 75px;
 	height: 75px;
 }
 .featurewidgeticon a:visited {
-	color: #0ea6f2;
+	color: #bbf3cc;
 }
 .featurewidgeticon a:hover {
 	transition: all 0.5s ease-out;
@@ -285,10 +285,9 @@ h1.site-title:hover {
 }
 /* end even front page boxes */
 #blogposts {
-	background-color: #f6f6f6;
+	background-color: #ffffff;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	border-top:15px solid #efefef;
 }
 .blogpost {
 	padding: 20px;
@@ -316,7 +315,7 @@ h1.site-title:hover {
 	position: absolute;
 	bottom: 5px;
 	right: 0px;
-	background-color: #0ea6f2;
+	background-color: #bbf3cc;
 	color: #fff;
 	padding: 8px;
 	padding-left: 17px;
@@ -338,7 +337,7 @@ h1.site-title:hover {
 	color: #292e32;
 }
 .blogposttitle a:hover {
-	color: #0ea6f2;
+	color: #bbf3cc;
 }
 .blogposttext {
 	font-size: 15px;
@@ -361,14 +360,14 @@ h1.site-title:hover {
 	margin-bottom: 0px;
 }
 .blogpostmeta .fa {
-	color: #0ea6f2;
+	color: #bbf3cc;
 	margin-right: 5px;
 }
 .blogpostmeta a {
 	color: #7f7f7f
 }
 .blogpostmeta a:hover {
-	color: #0ea6f2;
+	color: #bbf3cc;
 }
 /* ===============
    =INSIDE
@@ -406,20 +405,20 @@ h1.site-title:hover {
 	color: #292e32;
 }
 .postcontentitle a:hover {
-	color: #0ea6f2;
+	color: #bbf3cc;
 }
 .postcontent a {
-	color: #0ea6f2;
+	color: #bbf3cc;
 	text-decoration: none;
 	border-bottom: 1px dotted #ccc;
 }
 .postcontent a:hover {
 	color: #292e32;
 	text-decoration: none;
-	border-bottom: 1px solid #0ea6f2;
+	border-bottom: 1px solid #bbf3cc;
 }
 .postcontent a:visited {
-	color: #0ea6f2;
+	color: #bbf3cc;
 }
 .postcontentmeta {
 	font-size: 14px;
@@ -429,7 +428,7 @@ h1.site-title:hover {
 	color: #ccc
 }
 .postcontentmeta .fa {
-	color: #0ea6f2;
+	color: #bbf3cc;
 	margin-right: 5px;
 	margin-left: 20px;
 	font-size: 14px!important;
@@ -438,14 +437,14 @@ h1.site-title:hover {
 	color: #ccc
 }
 .postcontentmeta a:hover {
-	color: #0ea6f2;
+	color: #bbf3cc;
 }
 .authormeta {
 	margin-top: -20px;
 	margin-bottom: 20px;
 }
 .authormeta .fa {
-	color: #0ea6f2;
+	color: #bbf3cc;
 	font-size: 16px!important;
 	margin-right: 5px;
 }
@@ -465,7 +464,7 @@ h1.site-title:hover {
 	font-size: 15px;
 	line-height: 20px;
 	color: #fff!important;
-	background: #0ea6f2;
+	background: #bbf3cc;
 	padding: 8px 17px;
 	border-radius: 4px;
 }
@@ -479,7 +478,7 @@ h1.site-title:hover {
 	font-size: 1.125em;
 	line-height: 20px;
 	color: #ffffff!important;
-	background: #0ea6f2;
+	background: #bbf3cc;
 	padding: 8px 17px;
 	border-bottom: 0px;
 	border-radius: 5px
@@ -490,17 +489,17 @@ h1.site-title:hover {
 	border: 0px solid #5dc093;
 }
 .pagination a {
-	border: 0px solid #0ea6f2;
+	border: 0px solid #bbf3cc;
 }
 .pagination span {
 	background-color: #ccc;
 	color: #5dc093;
-	border: 0px solid #0ea6f2;
+	border: 0px solid #bbf3cc;
 }
 .pagination a:hover {
 	background: #000;
 	color: #fff;
-	border: 0px solid #0ea6f2;
+	border: 0px solid #bbf3cc;
 }
 /* ===============
    =SIDEBAR
@@ -522,7 +521,7 @@ h1.site-title:hover {
 	color: #a6a6a6;
 }
 .sidebarwidget a:hover {
-	border-bottom: 1px solid #0ea6f2;
+	border-bottom: 1px solid #bbf3cc;
 	color: #292e32;
 }
 .sidebarwidget li {
@@ -725,7 +724,7 @@ h1.site-title:hover {
    =============== */
 
 #footer {
-	background-color: #2c3239;
+	background-color: #f7f7f7;
 	width: 100%;
 	padding-top: 80px;
 	color: #a6a6a6;
@@ -746,7 +745,7 @@ h1.site-title:hover {
 	color: #a6a6a6;
 }
 .footerwidget a:hover {
-	border-bottom: 1px solid #0ea6f2;
+	border-bottom: 1px solid #bbf3cc;
 	color: #fff;
 }
 .footerwidget li {
@@ -769,7 +768,7 @@ h1.site-title:hover {
 	font-size: 14px;
 }
 #bottom {
-	background-color: #252a30;
+	background-color: #ffffff;
 	padding-top: 25px;
 	padding-bottom: 10px;
 	color: #a6a6a6;
@@ -795,7 +794,7 @@ h1.site-title:hover {
 	font-weight: 300;
 }
 .bottomtitle i {
-	color: #0ea6f2;
+	color: #bbf3cc;
 	font-size: 15px;
 }
 /* ===============
@@ -1141,10 +1140,10 @@ ol.comment-list {
 	padding: 17px;
 	font-size: 15px;
 	text-decoration: none;
-	color: #a5a5a5;
+	color: #a1a1a1;
 }
 #cssmenu > ul > li:hover > a, #cssmenu .menu > ul > li:hover > a {
-	color: #0ea6f2;
+	color: #bbf3cc;
 }
 #cssmenu > ul > li.has-sub > a, #cssmenu .menu > ul > li.has-sub > a {
 	padding-right: 30px;
@@ -1487,11 +1486,11 @@ a img {
 	border: 0;
 }
 ::selection {
-	background: #0ea6f2; /* WebKit/Blink Browsers */
+	background: #bbf3cc; /* WebKit/Blink Browsers */
 	color: #fff
 }
 ::-moz-selection {
- background: #0ea6f2; /* Gecko Browsers */
+ background: #bbf3cc; /* Gecko Browsers */
  color:#fff
 }
 /* =Global

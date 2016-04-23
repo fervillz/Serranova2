@@ -113,6 +113,5 @@
 	<div class="wrapper">
 
 			<?php get_template_part( 'inc/partials/content', 'header-hero' ); ?>
-			<?php get_template_part( 'inc/partials/content', 'header-social' ); ?>
   </div><!-- End Wrapper --> 
 </div><!-- End Hero --> 
