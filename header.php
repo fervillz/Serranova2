@@ -101,6 +101,8 @@
 
 <div id="hero">
 	<div class="wrapper">
-		<?php get_template_part( 'inc/partials/content', 'header-hero' ); ?>
+		<div class="col-2-3">
+			<?php get_template_part( 'inc/partials/content', 'header-hero' ); ?>
+		</div><!-- .col-2-3 -->
   </div><!-- End Wrapper --> 
 </div><!-- End Hero --> 

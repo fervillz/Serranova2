@@ -113,22 +113,22 @@ function Serranova_customizer( $wp_customize )
 	$wp_customize->add_section( 'Serranova_hero', array(
 		'title'       => __( 'Hero Banner', 'Serranova' ),
 		'priority'    => 50,
-		'description' => __( 'Big banner section on the front page - background image', 'Serranova' ),
+		'description' => __( 'Right image banner section on the front page', 'Serranova' ),
 		'panel'       => 'Serranova_homepage',
 	) );
 
 
 
-	$wp_customize->add_setting( 'Serranova_hero_bg_image', array(
-		'default'           => get_template_directory_uri() . '/images/header.jpg',
+	$wp_customize->add_setting( 'Serranova_hero_image', array(
+		'default'           => get_template_directory_uri() . '/images/mobile.png',
 		'type'              => 'theme_mod',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'esc_url_raw',
 	) );
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'Serranova_hero_bg_image', array(
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'Serranova_hero_image', array(
 		'label'    => __( 'Background image', 'Serranova' ),
 		'section'  => 'Serranova_hero',
-		'settings' => 'Serranova_hero_bg_image',
+		'settings' => 'Serranova_hero_image',
 	) ) );
 
 	$wp_customize->add_setting( 'Serranova_hero_title', array(
@@ -173,7 +173,7 @@ function Serranova_customizer( $wp_customize )
 	) );
 
 	$wp_customize->add_setting( 'Serranova_hero_button1_text', array(
-		'default'           => __( 'About us', 'Serranova' ),
+		'default'           => __( 'Learn More', 'Serranova' ),
 		'sanitize_callback' => 'sanitize_text_field',
 		'type'              => 'theme_mod',
 		'transport'         => 'postMessage',

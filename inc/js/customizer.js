@@ -48,7 +48,7 @@
 		});
 
 		// Serranova hero banner bg image
-		wp.customize('Serranova_hero_bg_image', function(value) {
+		wp.customize('Serranova_hero_image', function(value) {
 				value.bind(function(to) {
 						$('#hero .hero-bg').attr('style', 'background-image: url(' + to + ')');
 				});

@@ -132,12 +132,23 @@ h1.site-title:hover {
 #hero {
 	margin-bottom: 0px;
 	padding-top: 120px;
-	padding-bottom: 90px;
+	padding-bottom: 100px;
 	overflow: hidden;
 	position: relative;
 	text-align: left;
 	border-bottom: 30px solid;
 	background-color: #f7f7f7;
+	position: relative;
+}
+
+#hero .hero-image {
+	position: absolute;
+	bottom: calc(0px - 104px);
+	right: 0;
+}
+
+#hero .wrapper {
+	position: relative;
 }
 
 #hero .hero-bg {
@@ -1848,7 +1859,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 20px;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	quotes: "“" "”" "‘" "’";
+	quotes: "ΓÇ£" "ΓÇ¥" "ΓÇÿ" "ΓÇÖ";
 }
 
 blockquote:before {
@@ -2593,6 +2604,11 @@ a.pink:hover {
 .small {
 	font-size: 12px;
 	padding: 8px 15px;
+}
+
+.medium-x {
+	font-size: 14px;
+	padding: 12px 30px;
 }
 
 .medium {

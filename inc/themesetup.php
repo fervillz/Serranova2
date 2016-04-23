@@ -34,7 +34,7 @@ function Serranova_load_theme_colors()
 	$heroImageOverlayColor = get_theme_mod( 'Serranova_hero_overlay_color', '#1f242d' );
 	$heroImageOverlayOpacity = get_theme_mod( 'Serranova_hero_overlay_opacity', '90' );
 	$heroImageBlur = get_theme_mod( 'Serranova_hero_blur_enabled', '0' );
-	$hero_image_bg = get_theme_mod( 'Serranova_hero_bg_image' );
+	$hero_image_bg = get_theme_mod( 'Serranova_hero_image' );
 	echo '<style type="text/css">';
 
 	if ( !empty( $bodyBackgroundColor ) ) {
