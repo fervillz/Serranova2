@@ -12,7 +12,10 @@
 
 
 <h1 class="postcontenttitle"><?php the_title() ?></h1>
-<div class="authormeta">By:  <?php the_author_posts_link(); ?> </div>
+<div class="authormeta">
+	 Category: <?php the_category( ', ' ) ?> / 
+<?php the_tags( 'Tags: ', ', ', '<br />' ); ?> 
+</div>
         
 <?php
 		the_content();

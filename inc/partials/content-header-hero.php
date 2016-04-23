@@ -23,10 +23,10 @@ if ( $Serranova_display_hero_banner === 'yes' ) :
 	echo '<div class="herobuttons">';
 
 	if ( $Serranova_display_hero_button1 === 'yes' ) {
-		echo '<a href="' . esc_url( get_theme_mod( 'Serranova_hero_button1_link', '#' ) ) . '" class="button green large">' . esc_html( get_theme_mod( 'Serranova_hero_button1_text' ) ) . '</a>';
+		echo '<a href="' . esc_url( get_theme_mod( 'Serranova_hero_button1_link', '#' ) ) . '" class="button large">' . esc_html( get_theme_mod( 'Serranova_hero_button1_text' ) ) . '</a>';
 	}
 	if ( $Serranova_display_hero_button2 === 'yes' ) {
-		echo '<a href="' . esc_url( get_theme_mod( 'Serranova_hero_button2_link', '#' ) ) . '" class="button large">' . esc_html( get_theme_mod( 'Serranova_hero_button2_text' ) ) . '</a>';
+		echo '<a href="' . esc_url( get_theme_mod( 'Serranova_hero_button2_link', '#' ) ) . '" class="button green large">' . esc_html( get_theme_mod( 'Serranova_hero_button2_text' ) ) . '</a>';
 	}
 echo '</div>';
 	?>

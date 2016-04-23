@@ -5,7 +5,11 @@
  * @package Serranova
  */
 
-get_header('inside');
+
+while ( have_posts() ) :
+	the_post();
+	get_header('inside');
+endwhile;
 ?>
 <div class="insideposts">
 

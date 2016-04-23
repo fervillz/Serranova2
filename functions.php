@@ -244,17 +244,6 @@ function Serranova_tag_cloud_widget( $args )
 add_filter( 'widget_tag_cloud_args', 'Serranova_tag_cloud_widget' );
 
 
-// add custom class to tags
-function Serranova_add_class_the_tags( $html )
-{
-	$postid = get_the_ID();
-	$html = str_replace( '<a', '<a class="button seethrough small"', $html );
-
-	return $html;
-}
-
-add_filter( 'the_tags', 'Serranova_add_class_the_tags' );
-
 /**
  * Register widget area.
  *

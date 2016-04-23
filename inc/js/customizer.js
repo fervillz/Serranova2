@@ -313,6 +313,9 @@
 								$('.blogimage .fa, .search input.submit, .tab_head li:hover, .tab_head li.active, #hero .green, .pagination a, .pagination span, ::selection').css({
 										'background-color': to
 								});
+								$('#hero').css({
+										'border-color': to
+								});
 								$('.blogpostmeta .fa, .featurewidgeticon .fa, .socialmediamenu .fa, .profile_cont .fa, .herotext a, .postcontentmeta .fa').css({ color: to });
 								$('.herobuttons .button.seethrough, .tab_cont .clear').attr('style', 'border-color: ' + to);
 						}

@@ -143,9 +143,7 @@ function Serranova_customizer( $wp_customize )
 	) );
 
 	$wp_customize->add_setting( 'Serranova_hero_text', array(
-		'default'           => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor leo eu magna varius accumsan. Aliquam in dapibus massa, eget vestibulum turpis. <a href="#">Aliquam erat volutpat</a>. Pellentesque rhoncus pretium turpis faucibus placerat. Suspendisse eu sem quis enim posuere tristique.
-<a href="#" class="button green large">About us</a>
-<a href="#" class="button seethrough large">Contact us</a>',
+		'default'           => 'Clean code, WordPress standards and no bloating, guaranteed.',
 		'sanitize_callback' => 'Serranova_sanitize_textarea',
 		'type'              => 'theme_mod',
 		'transport'         => 'postMessage',
