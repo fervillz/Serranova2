@@ -35,6 +35,9 @@ echo '</div>';
 
 ?>
 
+<?php
+	$Serranova_hero_image = get_theme_mod( 'Serranova_hero_image', get_template_directory_uri() . '/images/mobile.png' );
+?>
 <div class="hero-image col-1-3">
-	<img src="<?php echo get_template_directory_uri(); ?>/images/mobile.png" alt="" />
+	<img src="<?php echo $Serranova_hero_image ?>" alt="" />
 </div><!-- .hero-image -->

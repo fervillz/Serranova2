@@ -50,7 +50,7 @@
 		// Serranova hero banner bg image
 		wp.customize('Serranova_hero_image', function(value) {
 				value.bind(function(to) {
-						$('#hero .hero-bg').attr('style', 'background-image: url(' + to + ')');
+						$('#hero .hero-image img').attr('src', to);
 				});
 		});
 
@@ -78,14 +78,14 @@
 		// Serranova hero button 1 text
 		wp.customize('Serranova_hero_button1_text', function(value) {
 				value.bind(function(to) {
-						$('.button.green').text(to);
+						$('.herobuttons a:first-child').text(to);
 				});
 		});
 
 		// Serranova hero button 1 link
 		wp.customize('Serranova_hero_button1_link', function(value) {
 				value.bind(function(to) {
-						$('.button.green').attr('href', encodeURI(to));
+						$('.herobuttons a:first-child').attr('href', encodeURI(to));
 				});
 		});
 
@@ -99,14 +99,14 @@
 		// Serranova hero button 2 text
 		wp.customize('Serranova_hero_button2_text', function(value) {
 				value.bind(function(to) {
-						$('.button.seethrough').text(to);
+						$('.herobuttons a:last-child').text(to);
 				});
 		});
 
 		// Serranova hero button 2 link
 		wp.customize('Serranova_hero_button2_link', function(value) {
 				value.bind(function(to) {
-						$('.button.seethrough').attr('href', encodeURI(to));
+						$('.herobuttons a:last-child').attr('href', encodeURI(to));
 				});
 		});
 
