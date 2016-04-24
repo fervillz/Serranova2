@@ -1,15 +1,15 @@
 <?php
 
-class serranova_Recent_Popular_Posts_Widget extends WP_Widget
+class Serranova_Recent_Popular_Posts_Widget extends WP_Widget
 {
 
 	public function __construct()
 	{
 		parent::__construct(
-			'serranova-recent-popular-posts-widget',
-			__( 'Recent / Popular Posts', 'serranova' ),
+			'Serranova-recent-popular-posts-widget',
+			__( 'Recent / Popular Posts', 'Serranova' ),
 			array(
-				'description' => __( 'Recent / popular posts widget for the sidebar', 'serranova' ),
+				'description' => __( 'Recent / popular posts widget for the sidebar', 'Serranova' ),
 			)
 		);
 	}
@@ -60,7 +60,7 @@ class serranova_Recent_Popular_Posts_Widget extends WP_Widget
 						<h6><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h6>
 						<p><i class="fa fa-calendar-check-o"></i><small>' . get_the_time( 'F j, Y' ) . '</small></p>
 						<p><i class="fa fa-comment-o"></i><a>';
-			comments_popup_link( __( 'Leave a comment', 'serranova' ), __( '1 Comment', 'serranova' ), __( '% Comments', 'serranova' ) );
+			comments_popup_link( __( 'Leave a comment', 'Serranova' ), __( '1 Comment', 'Serranova' ), __( '% Comments', 'Serranova' ) );
 			echo '</a></p>
 					</div>
 					<div class="clear"></div>
@@ -87,7 +87,7 @@ class serranova_Recent_Popular_Posts_Widget extends WP_Widget
 						<h6><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h6>
 						<p><i class="fa fa-calendar-check-o"></i><small>' . get_the_time( 'F j, Y' ) . '</small></p>
 						<p><i class="fa fa-comment-o"></i><a>';
-			comments_popup_link( __( 'Leave a comment', 'serranova' ), __( '1 Comment', 'serranova' ), __( '% Comments', 'serranova' ) );
+			comments_popup_link( __( 'Leave a comment', 'Serranova' ), __( '1 Comment', 'Serranova' ), __( '% Comments', 'Serranova' ) );
 			echo '</a></p>
 					</div>
 					<div class="clear"></div>
@@ -137,15 +137,15 @@ class serranova_Recent_Popular_Posts_Widget extends WP_Widget
 	 */
 	public function form( $instance )
 	{
-		$title_popular = ( isset( $instance['title-popular'] ) ) ? $instance['title-popular'] : __( 'Popular', 'serranova' );
-		$title_recent = ( isset( $instance['title-recent'] ) ) ? $instance['title-recent'] : __( 'Recent', 'serranova' );
+		$title_popular = ( isset( $instance['title-popular'] ) ) ? $instance['title-popular'] : __( 'Popular', 'Serranova' );
+		$title_recent = ( isset( $instance['title-recent'] ) ) ? $instance['title-recent'] : __( 'Recent', 'Serranova' );
 		$timeframe = ( isset( $instance['timeframe'] ) ) ? $instance['timeframe'] : 'week';
 		$limit = ( isset( $instance['limit'] ) ) ? $instance['limit'] : 3;
 		?>
-		<div class="serranova-recent-popular-posts-widget-container">
+		<div class="Serranova-recent-popular-posts-widget-container">
 			<p>
 				<label
-					for="<?php echo $this->get_field_id( 'title-popular' ); ?>"><?php _e( 'Title for Popular posts', 'serranova' ); ?></label>
+					for="<?php echo $this->get_field_id( 'title-popular' ); ?>"><?php _e( 'Title for Popular posts', 'Serranova' ); ?></label>
 				<input class="widefat" id="<?php echo $this->get_field_id( 'title-popular' ); ?>"
 					   name="<?php echo $this->get_field_name( 'title-popular' ); ?>" type="text"
 					   value="<?php echo esc_attr( $title_popular ); ?>"/>
@@ -153,7 +153,7 @@ class serranova_Recent_Popular_Posts_Widget extends WP_Widget
 
 			<p>
 				<label
-					for="<?php echo $this->get_field_id( 'title-recent' ); ?>"><?php _e( 'Title for Recent posts', 'serranova' ); ?></label>
+					for="<?php echo $this->get_field_id( 'title-recent' ); ?>"><?php _e( 'Title for Recent posts', 'Serranova' ); ?></label>
 				<input class="widefat" id="<?php echo $this->get_field_id( 'title-recent' ); ?>"
 					   name="<?php echo $this->get_field_name( 'title-recent' ); ?>" type="text"
 					   value="<?php echo esc_attr( $title_recent ); ?>"/>
@@ -161,26 +161,26 @@ class serranova_Recent_Popular_Posts_Widget extends WP_Widget
 
 			<p>
 				<label
-					for="<?php echo $this->get_field_id( 'timeframe' ); ?>"><?php _e( 'Select popular posts from', 'serranova' ); ?></label>
+					for="<?php echo $this->get_field_id( 'timeframe' ); ?>"><?php _e( 'Select popular posts from', 'Serranova' ); ?></label>
 
 				<select class="widefat" id="<?php echo $this->get_field_id( 'timeframe' ); ?>"
 						name="<?php echo $this->get_field_name( 'timeframe' ); ?>">
 					<option
-						value="day" <?php if ( $timeframe === 'day' ): echo 'selected'; endif; ?>><?php _e( 'Today', 'serranova' ); ?></option>
+						value="day" <?php if ( $timeframe === 'day' ): echo 'selected'; endif; ?>><?php _e( 'Today', 'Serranova' ); ?></option>
 					<option
-						value="week" <?php if ( $timeframe === 'week' ): echo 'selected'; endif; ?>><?php _e( 'Last Week', 'serranova' ); ?></option>
+						value="week" <?php if ( $timeframe === 'week' ): echo 'selected'; endif; ?>><?php _e( 'Last Week', 'Serranova' ); ?></option>
 					<option
-						value="month" <?php if ( $timeframe === 'month' ): echo 'selected'; endif; ?>><?php _e( 'Last Month', 'serranova' ); ?></option>
+						value="month" <?php if ( $timeframe === 'month' ): echo 'selected'; endif; ?>><?php _e( 'Last Month', 'Serranova' ); ?></option>
 					<option
-						value="year" <?php if ( $timeframe === 'year' ): echo 'selected'; endif; ?>><?php _e( 'Last Year', 'serranova' ); ?></option>
+						value="year" <?php if ( $timeframe === 'year' ): echo 'selected'; endif; ?>><?php _e( 'Last Year', 'Serranova' ); ?></option>
 					<option
-						value="alltime" <?php if ( $timeframe === 'alltime' ): echo 'selected'; endif; ?>><?php _e( 'All Time', 'serranova' ); ?></option>
+						value="alltime" <?php if ( $timeframe === 'alltime' ): echo 'selected'; endif; ?>><?php _e( 'All Time', 'Serranova' ); ?></option>
 				</select>
 			</p>
 
 			<p>
 				<label
-					for="<?php echo $this->get_field_id( 'limit' ); ?>"><?php _e( 'Items to show:', 'serranova' ); ?></label>
+					for="<?php echo $this->get_field_id( 'limit' ); ?>"><?php _e( 'Items to show:', 'Serranova' ); ?></label>
 				<input class="widefat" id="<?php echo $this->get_field_id( 'limit' ); ?>"
 					   name="<?php echo $this->get_field_name( 'limit' ); ?>" type="number"
 					   value="<?php echo esc_attr( $limit ); ?>"/>
@@ -193,9 +193,9 @@ class serranova_Recent_Popular_Posts_Widget extends WP_Widget
 }
 
 // init the widget
-function serranova_register_recent_popular_posts_widget()
+function Serranova_register_recent_popular_posts_widget()
 {
-	register_widget( 'serranova_Recent_Popular_Posts_Widget' );
+	register_widget( 'Serranova_Recent_Popular_Posts_Widget' );
 }
 
-add_action( 'widgets_init', 'serranova_register_recent_popular_posts_widget' );
+add_action( 'widgets_init', 'Serranova_register_recent_popular_posts_widget' );

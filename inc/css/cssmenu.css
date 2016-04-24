@@ -58,9 +58,6 @@
   text-decoration: none;
   color: #a5a5a5;
 }
-#cssmenu > ul > li:hover > a, #cssmenu .menu > ul > li:hover > a {
-  color: #0bb696;
-}
 #cssmenu > ul > li.has-sub > a, #cssmenu .menu > ul > li.has-sub > a {
   padding-right: 30px;
 }

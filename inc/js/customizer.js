@@ -220,12 +220,11 @@
 		wp.customize('serranova_accent_color', function(value) {
 				value.bind(function(to) {
 						if ('blank' === to) {
-								// bg - .search input.submit, .tab_head li:hover, .tab_head li.active, .banner_left a.contact, .read_more, .pagination a, .pagination span
-								$('.search input.submit, .tab_head li:hover, .tab_head li.active, #hero .green, .blogimage .fa, .blogpostmeta .fa, .featurewidgeticon .fa, .socialmediamenu .fa, .pagination a, .pagination span, .profile_cont .fa').css({});
+								$('.search input.submit, .tab_head li:hover, .tab_head li.active, #hero .green, .blogimage .fa, .blogpostmeta .fa, .socialmediamenu .fa, .profile_cont .fa').css({});
 								$('body #serranova-selection-styles').remove();
 						} else {
 								$('body').append('<style id="serranova-selection-styles">::selection {background: ' + to + '}</style>')
-								$('.block_cont_in ul li .fa-folder-open-o, .block_cont_in ul li .fa-calendar-check-o, .block_cont_in ul li .fa-comments-o, .profile_cont .fa, .comment-body a, #respond a, .post-edit-link, .authormeta a').css({
+								$('.block_cont_in ul li .fa-folder-open-o, .block_cont_in ul li .fa-calendar-check-o, .block_cont_in ul li .fa-comments-o, .profile_cont .fa, .comment-body a, #respond a, .post-edit-link, .authormeta a, #cssmenu > ul > li:hover > a').css({
 										'color': to
 								});
 								$('.postmeta li a')
@@ -271,13 +270,13 @@
 														borderRightColor: undefined
 												});
 										});
-								$('.blogimage .fa, .search input.submit, .tab_head li:hover, .tab_head li.active, #hero .green, .pagination a, .pagination span, ::selection').css({
+								$('.blogimage .fa, .search input.submit, .tab_head li:hover, .tab_head li.active, #hero .green, ::selection').css({
 										'background-color': to
 								});
-								$('#hero').css({
+								$('#hero, #footer #bottom').css({
 										'border-color': to
 								});
-								$('.blogpostmeta .fa, .featurewidgeticon .fa, .socialmediamenu .fa, .profile_cont .fa, .herotext a, .postcontentmeta .fa').css({ color: to });
+								$('.blogpostmeta .fa, .socialmediamenu .fa, .profile_cont .fa, .herotext a, .postcontentmeta .fa').css({ color: to });
 								$('.herobuttons .button.seethrough, .tab_cont .clear').attr('style', 'border-color: ' + to);
 						}
 				})

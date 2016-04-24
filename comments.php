@@ -23,10 +23,7 @@ if ( post_password_required() ) {
 <?php if ( have_comments() ) : ?>
 	<div id="comments">
 		<h2 class="comments-title">
-			<?php
-			printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'serranova' ),
-				number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-			?>
+			<?php _e('Comments','serranova'); ?>
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>

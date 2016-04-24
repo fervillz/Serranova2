@@ -102,10 +102,11 @@ header {
 	float: left;
 	text-transform: uppercase;
 	font-weight: 700;
+	letter-spacing: 4px;
 }
 
 h1.site-title {
-	color: #fff;
+	color: #000000;
 	border-bottom: 1px solid #bbf3cc;
 	transition: all 0.3s ease-out;
 }
@@ -230,7 +231,7 @@ h1.site-title:hover {
 
 .wrapper.featurearea {
 	margin-bottom: 30px;
-	padding-top: 50px;
+	padding-top: 65px;
 }
 
 .featurewidget {
@@ -261,10 +262,10 @@ h1.site-title:hover {
 }
 
 .featurewidgeticon {
-	font-size: 60px;
+	font-size: 24px;
 	background-color: #fff;
-	height: 75px;
-	width: 75px;
+	height: 50px;
+	width: 50px;
 	display: block;
 	-moz-border-radius: 75px;
 	-webkit-border-radius: 75px;
@@ -277,14 +278,15 @@ h1.site-title:hover {
 .featurewidgeticon:hover {}
 
 .featurewidgeticon a {
-	color: #bbf3cc;
-	display: block;
-	width: 75px;
-	height: 75px;
-}
-
-.featurewidgeticon a:visited {
-	color: #bbf3cc;
+	color: #fff;
+	width: 50px;
+	font-size: 100%;
+	height: 50px;
+	background: black;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .featurewidgeticon a:hover {
@@ -314,7 +316,7 @@ h1.site-title:hover {
 .home-posts .col-1-3 .wrap-col .blogpost {
 	display: flex;
 	flex-direction: column;
-	width: calc(100% - 40px);
+	width: 100%;
 }
 
 .home-posts .col-1-3 .wrap-col .blogpost .blogposttext {
@@ -329,9 +331,8 @@ h1.site-title:hover {
 }
 
 .blogpost {
-	padding: 20px;
 	background-color: #fff;
-	text-align: center;
+	text-align: left;
 }
 
 .blogimage {
@@ -352,7 +353,7 @@ h1.site-title:hover {
 }
 
 .blogimage img {
-	max-height: 190px;
+	max-height: 245px;
 	overflow: hidden;
 }
 
@@ -374,15 +375,14 @@ h1.site-title:hover {
 
 .blogposttitle {
 	font-size: 18px;
-	font-weight: 400;
-	margin-top: 15px;
-	margin-bottom: 10px;
-	color: #292e32;
-	text-transform: uppercase;
+	font-weight: 700;
+	margin-top: 10px;
+	margin-bottom: 0;
+	color: #1e1e1e;
 }
 
 .blogposttitle a {
-	color: #292e32;
+	color: #1e1e1e;
 }
 
 .blogposttitle a:hover {
@@ -392,9 +392,10 @@ h1.site-title:hover {
 .blogposttext {
 	font-size: 15px;
 	line-height: 22px;
-	margin-top: 5px;
+	margin-top: 4px;
 	font-weight: 300;
 	margin-bottom: 10px;
+	color: #bebebe;
 }
 
 .blogpostmeta:before {
@@ -536,18 +537,18 @@ h1.site-title:hover {
 .pagination {
 	padding-top: 40px;
 	padding-bottom: 10px;
-	text-align: center;
+	text-align: left;
 }
 
 .read_more, .pagination a, .pagination span {
 	display: inline-block;
 	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
-	font-size: 15px;
+	font-weight: 700;
+	font-size: 18px;
 	line-height: 20px;
-	color: #fff !important;
-	background: #bbf3cc;
-	padding: 8px 17px;
+	color: #1e1e1e;
+	background: #ececec;
+	padding: 8px 13px;
 	border-radius: 4px;
 }
 
@@ -579,9 +580,8 @@ h1.site-title:hover {
 }
 
 .pagination span {
-	background-color: #ccc;
-	color: #5dc093;
-	border: 0px solid #bbf3cc;
+	background-color: #403e3f;
+	color: #fff;
 }
 
 .pagination a:hover {
@@ -652,7 +652,7 @@ h1.site-title:hover {
 
 .authorwidget {
 	display: block;
-	background: #ffffff;
+	background: #f8f8f8;
 	margin: 0 0 19px 0;
 }
 
@@ -863,9 +863,8 @@ h1.site-title:hover {
 #footer {
 	background-color: #f7f7f7;
 	width: 100%;
-	padding-top: 80px;
+	padding-top: 50px;
 	color: #a6a6a6;
-	border-top: 15px solid #efefef;
 }
 
 .footerwidget {
@@ -904,20 +903,54 @@ h1.site-title:hover {
 }
 
 .footerwidget .widget-title {
-	color: #fff;
+	color: #000;
 	font-family: 'Varela Round', sans-serif;
-	font-weight: 300;
-	text-transform: uppercase;
+	font-weight: 700;
+	text-transform: capitalize;
 	margin-bottom: 15px;
-	font-size: 14px;
+	font-size: 16px;
+}
+
+.footer-feature {
+	line-height: 1.6em;
+	display: flex;
+	align-items: center;
+}
+
+.footer-feature h3 {
+	color: #1e1e1e;
+	font-size: 24px;
+	line-height: normal;
+}
+
+.footer-feature .desc p {
+	color: #bebebe;
+	font-size: 18px;
+	margin-top: 25px;
+}
+
+.footer-feature-1 {
+	text-align: right;
+	width: 80%;
+}
+
+.footer-feature-2 {
+	text-align: center;
+	width: 130%;
+}
+
+.footer-feature-3 {
+	text-align: left;
+	width: 80%;
 }
 
 #bottom {
 	background-color: #ffffff;
-	padding-top: 25px;
-	padding-bottom: 10px;
+	padding-top: 80px;
+	padding-bottom: 60px;
 	color: #a6a6a6;
 	font-size: 14px;
+	border-top: 30px solid;
 }
 
 #bottom {
@@ -930,11 +963,13 @@ h1.site-title:hover {
 }
 
 #bottom a:hover {
-	color: #fff;
+	color: #000;
 }
 
 #bottom p {
 	margin-bottom: 15px;
+	margin-top: 20px;
+	line-height: 1.6em;
 }
 
 .bottomtitle {
@@ -1859,7 +1894,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 20px;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	quotes: "ΓÇ£" "ΓÇ¥" "ΓÇÿ" "ΓÇÖ";
+	quotes: "╬ô├ç┬ú" "╬ô├ç┬Ñ" "╬ô├ç├┐" "╬ô├ç├û";
 }
 
 blockquote:before {
@@ -2134,24 +2169,23 @@ button, input, select, textarea {
 	letter-spacing: 0.5px;
 	line-height: 1;
 	color: white;
-	background-color: #1e1e1e;
+	background-color: #bbf3cc;
 	display: inline-block;
 	outline: none;
 	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
 	padding: 12px 15px;
-	margin-left: 5px;
-	margin-right: 5px;
 	border-radius: 4px;
 	border: 0px;
 	text-transform: uppercase;
+	box-shadow: inset 0 0 0 99999px rgba(0, 0, 0, 0.2);
 }
 
 .button, button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .tagcloud a:hover {
-	background-color: #4C4C4C;
 	color: white;
 	transition: all 0.3s ease-out;
+	box-shadow: none;
 }
 
 .button:visited, button:visited, html input[type="button"]:visited, input[type="reset"]:visited, input[type="submit"]:visited {
@@ -2205,14 +2239,14 @@ textarea {
 	width: 98%;
 }
 
-.searchform {
-	margin-left: 10px;
+.search-form {
+	background: #fff;
+	padding: 5px;
+	border-radius: 4px;
 }
 
 .search-field {
-	padding: 6px !important;
-	margin-top: -3px;
-	margin-bottom: -13px !important;
+	border: none !important;
 }
 
 .submit {

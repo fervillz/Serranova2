@@ -159,10 +159,9 @@ function serranova_set_sample_content()
 		$popular_recent_posts_widget[1] = array( 'title-popular' => 'Popular', 'title-recent' => 'Recent', 'timeframe' => 'week', 'limit' => 3 );
 
 		$text_widget = get_option( 'widget_text' );
-		$text_widget[1] = array( 'title' => __( 'Text Widget', 'serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
+		$text_widget[1] = array( 'title' => __( 'Text Widget', 'serranova' ), 'text' => 'Lporem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
 		$text_widget[2] = array( 'title' => __( 'Text Widget', 'serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
 		$text_widget[3] = array( 'title' => __( 'Text Widget', 'serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
-		$text_widget[4] = array( 'title' => __( 'Text Widget', 'serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
 
 
 		$active_sidebars['serranova-footer'] = array( 'text-1', 'text-2', 'text-3', 'text-4' );
@@ -198,14 +197,8 @@ function serranova_set_sample_content()
 			'icon'    => 'fa-gears',
 
 		);
-		$feature_widget[4] = array(
-			'title'   => __( 'Coded With Care', 'serranova' ),
-			'textbox' => 'We have coded the serranova theme to be fast loading, with no bloated extras and it complies with all the latest WordPress theme requirements.',
-			'url'     => get_home_url(),
-			'icon'    => 'fa-file-code-o',
 
-		);
-		$active_sidebars['serranova-features'] = array( 'serranova-feature-widget-1', 'serranova-feature-widget-2', 'serranova-feature-widget-3', 'serranova-feature-widget-4' );
+		$active_sidebars['serranova-features'] = array( 'serranova-feature-widget-1', 'serranova-feature-widget-2', 'serranova-feature-widget-3' );
 		update_option( 'widget_serranova-feature-widget', $feature_widget );
 		update_option( 'sidebars_widgets', $active_sidebars );
 
@@ -271,7 +264,7 @@ function serranova_widgets_init()
 	register_sidebar( array(
 		'name'          => __( 'Features', 'serranova' ),
 		'id'            => 'serranova-features',
-		'before_widget' => '<div class="col-1-4"><div class="wrap-col"><div class="featurewidget">',
+		'before_widget' => '<div class="col-1-3"><div class="wrap-col"><div class="featurewidget">',
 		'after_widget'  => '</div></div></div>',
 		'before_title'  => '<h2 class="featurewidgettitle">',
 		'after_title'   => '</h2>',
