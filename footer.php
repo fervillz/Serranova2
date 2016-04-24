@@ -1,3 +1,16 @@
+<?php 
+//Image
+$serranova_footer_image = get_theme_mod( 'serranova_footer_image', get_template_directory_uri() . '/images/laptop.png' ); 
+//Titles
+$serranova_footer_title_l = get_theme_mod( 'serranova_footer_title_l' );
+$serranova_footer_title_r = get_theme_mod( 'serranova_footer_title_r' );
+//Sub Texts
+$serranova_footer_text_l = get_theme_mod( 'serranova_footer_text_l' );
+$serranova_footer_text_r = get_theme_mod( 'serranova_footer_text_r' );
+?>
+
+
+
 <div id="footer">	
 	<div class="top">
 		<div class="wrapper">
@@ -6,21 +19,21 @@
 					<div class="wrap-col footer-feature ">
 						<div class="footer-feature-1">
 							<h3>
-								Serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.
+								<?php echo $serranova_footer_title_l; ?>
 							</h3>
 							<div class="desc">
-								<p>Clean code, WordPress standards and no bloating, guaranteed.</p>
+								<p><?php echo $serranova_footer_text_l; ?></p>
 							</div><!-- .desc -->
 						</div><!-- .footer-feature -->
 						<div class="footer-feature-2">
-							<img src="<?php  echo get_template_directory_uri(); ?>/images/laptop.png " alt="" />
+							<img src="<?php echo $serranova_footer_image ?>" alt="" />
 						</div><!-- .footer-feature -->	
 						<div class="footer-feature-3">
 							<h3>
-								Serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.
+								<?php echo $serranova_footer_title_r; ?>
 							</h3>
 							<div class="desc">
-								<p>Clean code, WordPress standards and no bloating, guaranteed.</p>
+								<p><?php echo $serranova_footer_text_r; ?></p>
 							</div><!-- .desc -->
 						</div><!-- .footer-feature -->	
 					</div><!-- .wrap-col -->

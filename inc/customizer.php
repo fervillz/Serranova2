@@ -117,8 +117,6 @@ function serranova_customizer( $wp_customize )
 		'panel'       => 'serranova_homepage',
 	) );
 
-
-
 	$wp_customize->add_setting( 'serranova_hero_image', array(
 		'default'           => get_template_directory_uri() . '/images/mobile.png',
 		'type'              => 'theme_mod',
@@ -244,7 +242,79 @@ function serranova_customizer( $wp_customize )
 		'type'     => 'text',
 	) );
 	// end hero banner
+	
+	// footer feature
+	$wp_customize->add_section( 'serranova_footer', array(
+		'title'       => __( 'Footer', 'serranova' ),
+		'priority'    => 51,
+		'description' => __( 'Middle image on upper footer section', 'serranova' ),
+		'panel'       => 'serranova_homepage',
+	) );
 
+	$wp_customize->add_setting( 'serranova_footer_image', array(
+		'default'           => get_template_directory_uri() . '/images/laptop.png',
+		'type'              => 'theme_mod',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'serranova_footer_image', array(
+		'label'    => __( 'Middle image', 'serranova' ),
+		'section'  => 'serranova_footer',
+		'settings' => 'serranova_footer_image',
+	) ) );
+
+		$wp_customize->add_setting( 'serranova_footer_title_l', array(
+		'default'           => __( 'Serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.', 'serranova' ),
+		'sanitize_callback' => 'sanitize_text_field',
+		'type'              => 'theme_mod',
+		'transport'         => 'postMessage',
+	) );
+	$wp_customize->add_control( 'serranova_footer_title_l', array(
+		'label'   => __( 'Left Title', 'serranova' ),
+		'section' => 'serranova_footer',
+	) );
+
+	$wp_customize->add_setting( 'serranova_footer_text_l', array(
+		'default'           => 'Clean code, WordPress standards and no bloating, guaranteed.',
+		'sanitize_callback' => 'serranova_sanitize_textarea',
+		'type'              => 'theme_mod',
+		'transport'         => 'postMessage',
+	) );
+
+	$wp_customize->add_control( 'serranova_footer_text_l', array(
+		'label'    => __( 'Left text', 'serranova' ),
+		'section'  => 'serranova_footer',
+		'settings' => 'serranova_footer_text_l',
+		'type'     => 'textarea',
+	) );
+
+
+	$wp_customize->add_setting( 'serranova_footer_title_r', array(
+		'default'           => __( 'Serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.', 'serranova' ),
+		'sanitize_callback' => 'sanitize_text_field',
+		'type'              => 'theme_mod',
+		'transport'         => 'postMessage',
+	) );
+	$wp_customize->add_control( 'serranova_footer_title_r', array(
+		'label'   => __( 'Right Title', 'serranova' ),
+		'section' => 'serranova_footer',
+	) );
+
+	$wp_customize->add_setting( 'serranova_footer_text_r', array(
+		'default'           => 'Clean code, WordPress standards and no bloating, guaranteed.',
+		'sanitize_callback' => 'serranova_sanitize_textarea',
+		'type'              => 'theme_mod',
+		'transport'         => 'postMessage',
+	) );
+
+	$wp_customize->add_control( 'serranova_footer_text_r', array(
+		'label'    => __( 'Left text', 'serranova' ),
+		'section'  => 'serranova_footer',
+		'settings' => 'serranova_footer_text_r',
+		'type'     => 'textarea',
+	) );
+	//End footer feature
+	
 	// footer logo
 	$wp_customize->add_section( 'serranova_footer_logo', array(
 		'title'    => __( 'Footer logo', 'serranova' ),

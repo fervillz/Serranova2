@@ -217,6 +217,11 @@ function serranova_set_sample_content()
 		set_theme_mod( 'serranova_hero_button2_text', __( 'Contact us', 'serranova' ) );
 
 		set_theme_mod( 'serranova_content_set', true );
+
+		set_theme_mod( 'serranova_footer_title_l', 'serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.' );
+		set_theme_mod( 'serranova_footer_title_r', 'serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.' );
+		set_theme_mod( 'serranova_footer_text_l', 'Clean code, WordPress standards and no bloating, guaranteed.' );
+		set_theme_mod( 'serranova_footer_text_r', 'Clean code, WordPress standards and no bloating, guaranteed.' );
 	}
 }
 

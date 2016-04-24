@@ -458,7 +458,6 @@ h1.site-title:hover {
 
 .postcontenttitle {
 	font-weight: 400;
-	margin-top: 25px;
 	margin-bottom: 10px;
 	color: #292e32;
 	text-transform: none;
@@ -1392,14 +1391,16 @@ ol.comment-list {
 }
 
 #cssmenu > ul > li > a, #cssmenu .menu > ul > li > a {
-	padding: 17px;
-	font-size: 15px;
+	padding: 2px;
+	margin: 11px;
+	font-size: 16px;
 	text-decoration: none;
 	color: #a1a1a1;
 }
 
 #cssmenu > ul > li:hover > a, #cssmenu .menu > ul > li:hover > a {
 	color: #bbf3cc;
+	border-bottom: 2px solid;
 }
 
 #cssmenu > ul > li.has-sub > a, #cssmenu .menu > ul > li.has-sub > a {
@@ -1894,7 +1895,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 20px;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	quotes: "╬ô├ç┬ú" "╬ô├ç┬Ñ" "╬ô├ç├┐" "╬ô├ç├û";
+	quotes: "Γò¼├┤Γö£├ºΓö¼├║" "Γò¼├┤Γö£├ºΓö¼├æ" "Γò¼├┤Γö£├ºΓö£ΓöÉ" "Γò¼├┤Γö£├ºΓö£├╗";
 }
 
 blockquote:before {
@@ -2893,8 +2894,26 @@ a.pink:hover {
 		font-size: 18px;
 	}
 
+	.hero-image {
+		display: none !important;
+	}
+
 	.blogimage img {
 		max-height: none;
+	}
+
+	#footer {
+		padding-top: 30px;
+	}
+
+	.footer-feature {
+		display: block;
+	}
+
+	.footer-feature-1, .footer-feature-2, .footer-feature-3 {
+		text-align: center;
+		width: 100%;
+		margin: 30px 0;
 	}
 }
 

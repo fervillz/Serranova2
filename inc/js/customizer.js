@@ -54,6 +54,42 @@
 				});
 		});
 
+		// serranova footer middle image
+		wp.customize('serranova_footer_image', function(value) {
+				value.bind(function(to) {
+						$('.footer-feature-2 img').attr('src', to);
+				});
+		});
+
+		// serranova footer left title
+		wp.customize('serranova_footer_title_l', function(value) {
+				value.bind(function(to) {
+						$('.footer-feature-1 h3').text(to);
+				});
+		});
+
+		// serranova footer left text
+		wp.customize('serranova_footer_text_l', function(value) {
+				value.bind(function(to) {
+						$('.footer-feature-1 .desc p').html(to);
+				});
+		});
+
+		// serranova footer right title
+		wp.customize('serranova_footer_title_r', function(value) {
+				value.bind(function(to) {
+						$('.footer-feature-3 h3').text(to);
+				});
+		});
+
+		// serranova footer right text
+		wp.customize('serranova_footer_text_r', function(value) {
+				value.bind(function(to) {
+						$('.footer-feature-3 .desc p').html(to);
+				});
+		});
+
+
 		// serranova hero banner title
 		wp.customize('serranova_hero_title', function(value) {
 				value.bind(function(to) {
@@ -224,8 +260,14 @@
 								$('body #serranova-selection-styles').remove();
 						} else {
 								$('body').append('<style id="serranova-selection-styles">::selection {background: ' + to + '}</style>')
-								$('.block_cont_in ul li .fa-folder-open-o, .block_cont_in ul li .fa-calendar-check-o, .block_cont_in ul li .fa-comments-o, .profile_cont .fa, .comment-body a, #respond a, .post-edit-link, .authormeta a, #cssmenu > ul > li:hover > a').css({
+								$('.insideposts a, .featurearea a, #blogposts a, #footer a, .block_cont_in ul li .fa-folder-open-o, .block_cont_in ul li .fa-calendar-check-o, .block_cont_in ul li .fa-comments-o, .profile_cont .fa, .comment-body a, #respond a, .post-edit-link, .authormeta a, #cssmenu > ul > li:hover > a').css({
 										'color': to
+								});
+								$('#cssmenu > ul > li:hover a').css({
+									color: to
+								});
+								$('.featurewidgeticon a').css({
+									color: '#fff'
 								});
 								$('.postmeta li a')
 										.on('mouseenter', function(e) {
