@@ -51,10 +51,10 @@ function serranova_load_theme_colors()
 		if ( strpos( $accentColor, '#' ) === false ) {
 			$hash = '#';
 		}
-		echo '.blogposttitle a:hover, a,  .blogpostmeta .fa, .socialmediamenu .fa, .profile_cont .fa, .herotext a, .postcontentmeta .fa, #hero .fa, .authormeta a, .post-edit-link, #content a, #comments a, #respond a { color: ' . $hash . $accentColor . '} ';
+		echo '.blogposttitle a:hover, a,  .blogpostmeta .fa, .socialmediamenu .fa, .profile_cont .fa, .herotext a, .postcontentmeta .fa, #hero .fa, .authormeta a, .post-edit-link, #content a, #cssmenu li:hover a { color: ' . $hash . $accentColor . '} ';
 		echo  '#hero, #footer #bottom { border-color: ' . $hash . $accentColor . '} ';
 		echo '.postmeta li a:hover, .blogpostmeta a:hover, .postcontentmeta a:hover, .sidebarwidget .fa:hover, .sidebarwidget li a:hover {color: ' . $hash . $accentColor . '} ';
-		echo '.page-links a, .tab_head li:hover, .blogimage .fa, .search input.submit, .tab_head li:hover, .tab_head li.active, #hero .green{background-color: ' . $hash . $accentColor . '} ';
+		echo '.page-links a, a.comment-reply-link, input[type="submit"], .tab_head li:hover, .blogimage .fa, .search input.submit, .tab_head li:hover, .tab_head li.active, #hero .green{background-color: ' . $hash . $accentColor . '} ';
 		echo '::selection {background-color: ' .$hash.$accentColor. '}';
 		echo '*::-moz-selection {background-color: ' .$hash.$accentColor. '}';
 		//echo '.menu-item.has-sub a::before, .menu-item.has-sub a::after {background: ' .$hash . $accentColor. ' !important;}';

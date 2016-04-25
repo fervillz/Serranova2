@@ -260,11 +260,8 @@
 								$('body #serranova-selection-styles').remove();
 						} else {
 								$('body').append('<style id="serranova-selection-styles">::selection {background: ' + to + '}</style>')
-								$('.insideposts a, .featurearea a, #blogposts a, #footer a, .block_cont_in ul li .fa-folder-open-o, .block_cont_in ul li .fa-calendar-check-o, .block_cont_in ul li .fa-comments-o, .profile_cont .fa, .comment-body a, #respond a, .post-edit-link, .authormeta a, #cssmenu > ul > li:hover > a').css({
+								$('.insideposts #content a, .featurearea a, #footer a, .block_cont_in ul li .fa-folder-open-o, .block_cont_in ul li .fa-calendar-check-o, .block_cont_in ul li .fa-comments-o, .authorwidget .fa, .profile_cont .fa, .post-edit-link, .authormeta a, #cssmenu li a:hover ').css({
 										'color': to
-								});
-								$('#cssmenu > ul > li:hover a').css({
-									color: to
 								});
 								$('.featurewidgeticon a').css({
 									color: '#fff'
@@ -287,7 +284,7 @@
 										.on('mouseleave', function(e) {
 												$(e.target).attr('style', '');
 										});
-								$('.blogpostmeta a, .postcontentmeta a')
+								$('.blogpostmeta a')
 										.on('mouseover', function(e) {
 												$(e.target).attr('style', 'color: ' + to);
 										})
@@ -312,7 +309,7 @@
 														borderRightColor: undefined
 												});
 										});
-								$('.blogimage .fa, .search input.submit, .tab_head li:hover, .tab_head li.active, #hero .green, ::selection').css({
+								$('.blogimage .fa, a.comment-reply-link, input[type="submit"], .search input.submit, .tab_head li:hover, .tab_head li.active, #hero .green, ::selection').css({
 										'background-color': to
 								});
 								$('#hero, #footer #bottom').css({

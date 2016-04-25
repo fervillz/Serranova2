@@ -104,35 +104,39 @@
 
 	<div class="wrapper">
 
-			<h2><?php
-						if ( is_category() ) :
-							single_cat_title();
+		<h2><?php
+			if ( is_category() ) :
+				single_cat_title();
 
-						elseif ( is_tag() ) :
-							single_tag_title();
+			elseif ( is_tag() ) :
+				single_tag_title();
 
-						elseif ( is_author() ) :
-							printf( __( 'Author: %s', 'serranova' ), '<span class="vcard">' . get_the_author() . '</span>' );
+			elseif ( is_author() ) :
+				printf( __( 'Author: %s', 'serranova' ), '<span class="vcard">' . get_the_author() . '</span>' );
 
-						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'serranova' ), '<span>' . get_the_date() . '</span>' );
+			elseif ( is_day() ) :
+				printf( __( 'Day: %s', 'serranova' ), '<span>' . get_the_date() . '</span>' );
 
-						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'serranova' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'serranova' ) ) . '</span>' );
+			elseif ( is_month() ) :
+				printf( __( 'Month: %s', 'serranova' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'serranova' ) ) . '</span>' );
 
-						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'serranova' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'serranova' ) ) . '</span>' );
-						else :
-							_e( 'Archives', 'serranova' );
+			elseif ( is_year() ) :
+				printf( __( 'Year: %s', 'serranova' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'serranova' ) ) . '</span>' );
+			else :
+				_e( 'Archives', 'serranova' );
 
-						endif;
-						?></h2>
-	<?php
-					// Show an optional term description.
-					$term_description = term_description();
-					if ( !empty( $term_description ) ) :
-						printf( '<p class="herotext"%s</p>', $term_description );
-					endif;
-					?>
+			endif;
+			?>
+		</h2>
+
+		<?php
+		// Show an optional term description.
+		$term_description = term_description();
+
+		if ( !empty( $term_description ) ) : ?>
+			<div class="postcontentmeta">
+				<?php echo $term_description; ?>
+			</div><!-- .postcontentmeta -->
+		<?php endif; ?>
   </div><!-- End Wrapper --> 
 </div><!-- End Hero --> 

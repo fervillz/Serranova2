@@ -1,19 +1,17 @@
 <?php
 /**
- * The template part for displaying latest news section on the front page.
+ * The template part for displaying post in certain category.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package serranova
  */
 
-$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 // WP_Query arguments
 $args = array (
 	'post_type'              => array( 'post' ),
 	'post_status'            => array( 'publish' ),
-	'paged'                  => $paged,
-	'posts_per_page'         => '6',
+	'posts_per_page'         => '100',
 	'ignore_sticky_posts'    => true,
 );
 
@@ -61,7 +59,7 @@ $query_serranova = new WP_Query( $args );
 </div>
 <!-- end row -->
 
-<?php serranova_pagination( $query_serranova ); wp_reset_postdata(); ?>
+<?php wp_reset_postdata(); ?>
 </div>
 <!-- End Wrapper -->
 </div>

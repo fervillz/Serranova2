@@ -243,7 +243,7 @@ function serranova_customizer( $wp_customize )
 	) );
 	// end hero banner
 	
-	// footer feature
+	// footer footer
 	$wp_customize->add_section( 'serranova_footer', array(
 		'title'       => __( 'Footer', 'serranova' ),
 		'priority'    => 51,
