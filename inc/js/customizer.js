@@ -121,7 +121,7 @@
 		// serranova hero button 1 show/hide
 		wp.customize('serranova_hero_button1_show', function(value) {
 				value.bind(function(to) {
-						return to === 'yes' ? $('.button.green').show() : $('.button.green').hide();
+						return to === 'yes' ? $('.herobuttons a:first-child').show() : $('.herobuttons a:first-child').hide();
 				});
 		});
 
@@ -142,7 +142,7 @@
 		// serranova hero button 2 show/hide
 		wp.customize('serranova_hero_button2_show', function(value) {
 				value.bind(function(to) {
-						return to === 'yes' ? $('.button.seethrough').show() : $('.button.seethrough').hide();
+						return to === 'yes' ? $('.herobuttons a:last-child').show() : $('.herobuttons a:last-child').hide();
 				});
 		});
 
