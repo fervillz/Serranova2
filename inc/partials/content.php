@@ -34,7 +34,7 @@ $query_serranova = new WP_Query( $args );
 
 		<div class="col-1-3">
 			<div class="wrap-col">
-				<div class="blogpost">
+				<div class="blogpost" <?php post_class(); ?>>
 					<div class="blogimage">
 						<a href="<?php the_permalink();?>" class="blogimagelink">
 						<?php if ( has_post_thumbnail() ) {

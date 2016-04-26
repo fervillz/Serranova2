@@ -159,12 +159,17 @@ function serranova_set_sample_content()
 		$popular_recent_posts_widget[1] = array( 'title-popular' => 'Popular', 'title-recent' => 'Recent', 'timeframe' => 'week', 'limit' => 3 );
 
 		$text_widget = get_option( 'widget_text' );
-		$text_widget[1] = array( 'title' => __( 'Text Widget', 'serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
-		$text_widget[2] = array( 'title' => __( 'Text Widget', 'serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
+		$text_widget[1] = array( 'title' => __( 'Texts Widget', 'serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
+		$text_widget[2] = array( 'title' => __( 'Texts Widget', 'serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
 		$text_widget[3] = array( 'title' => __( 'Text Widget', 'serranova' ), 'text' => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' );
 
 
-		$active_sidebars['serranova-footer'] = array( 'text-1', 'text-2', 'text-3');
+		$nav_menu_widget = get_option( 'widget_nav_menu' );
+		$nav_menu_widget[1] =  array (  'title' => __( 'Menu Widget', 'serranova' ), 'nav_menu' => 2 );
+		$nav_menu_widget[2] =  array (  'title' => __( 'Menu Widget', 'serranova' ), 'nav_menu' => 2 );
+		$nav_menu_widget[3] =  array (  'title' => __( 'Menu Widget', 'serranova' ), 'nav_menu' => 2 );
+
+		$active_sidebars['serranova-footer'] = array( 'nav_menu-1', 'nav_menu-2', 'nav_menu-3');
 		update_option( 'widget_serranova-author-box-widget', $author_box_widget );
 		update_option( 'widget_serranova-recent-popular-posts-widget', $popular_recent_posts_widget );
 		update_option( 'sidebars_widgets', $active_sidebars );
@@ -172,6 +177,7 @@ function serranova_set_sample_content()
 		$active_sidebars['sidebar-1'] = array( 'serranova-author-box-widget-1', 'text-1', 'search-1', 'serranova-recent-popular-posts-widget-1' );
 		update_option( 'widget_search', $search_widget );
 		update_option( 'widget_text', $text_widget );
+		update_option( 'widget_nav_menu', $nav_menu_widget );
 		update_option( 'sidebars_widgets', $active_sidebars );
 
 
@@ -183,6 +189,7 @@ function serranova_set_sample_content()
 			'icon'    => 'fa-desktop',
 
 		);
+
 		$feature_widget[2] = array(
 			'title'   => __( 'eCommerce Ready', 'serranova' ),
 			'textbox' => 'Use serranova with the <a href="http://www.woothemes.com/woocommerce/">WooCommerce plugin</a> and you can create your own online store to sell digital or tangible products with no fuss.',
@@ -198,6 +205,8 @@ function serranova_set_sample_content()
 
 		);
 
+
+
 		$active_sidebars['serranova-features'] = array( 'serranova-feature-widget-1', 'serranova-feature-widget-2', 'serranova-feature-widget-3' );
 		update_option( 'widget_serranova-feature-widget', $feature_widget );
 		update_option( 'sidebars_widgets', $active_sidebars );
@@ -210,7 +219,7 @@ function serranova_set_sample_content()
 		set_theme_mod( 'serranova_header_logo_text', get_bloginfo( 'name' ) );
 		set_theme_mod( 'serranova_hero_show', 'yes' );
 		set_theme_mod( 'serranova_hero_image', get_template_directory_uri() . '/images/mobile.png' );
-		set_theme_mod( 'serranova_hero_title', 'serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.' );
+		set_theme_mod( 'serranova_hero_title', 'Serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.' );
 		set_theme_mod( 'serranova_hero_text', 'Clean code, WordPress standards and no bloating, guaranteed..' );
 
 		set_theme_mod( 'serranova_hero_button1_text', __( 'Learn More', 'serranova' ) );
@@ -218,8 +227,8 @@ function serranova_set_sample_content()
 
 		set_theme_mod( 'serranova_content_set', true );
 
-		set_theme_mod( 'serranova_footer_title_l', 'serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.' );
-		set_theme_mod( 'serranova_footer_title_r', 'serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.' );
+		set_theme_mod( 'serranova_footer_title_l', 'Serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.' );
+		set_theme_mod( 'serranova_footer_title_r', 'Serranova is a beautiful, clean and light WordPress theme, perfect for apps, landing pages and business sites.' );
 		set_theme_mod( 'serranova_footer_text_l', 'Clean code, WordPress standards and no bloating, guaranteed.' );
 		set_theme_mod( 'serranova_footer_text_r', 'Clean code, WordPress standards and no bloating, guaranteed.' );
 	}

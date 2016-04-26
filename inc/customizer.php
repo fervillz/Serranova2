@@ -113,8 +113,34 @@ function serranova_customizer( $wp_customize )
 	$wp_customize->add_section( 'serranova_hero', array(
 		'title'       => __( 'Hero Banner', 'serranova' ),
 		'priority'    => 50,
-		'description' => __( 'Right image banner section on the front page', 'serranova' ),
+		'description' => __( 'background image banner section on the front page', 'serranova' ),
 		'panel'       => 'serranova_homepage',
+	) );
+
+	$wp_customize->add_setting( 'serranova_hero_bg_image', array(
+		'default'           => '',
+		'type'              => 'theme_mod',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'serranova_hero_bg_image', array(
+		'label'    => __( 'Background image', 'serranova' ),
+		'section'  => 'serranova_hero',
+		'settings' => 'serranova_hero_bg_image',
+	) ) );
+
+	$wp_customize->add_setting( 'serranova_hero_blur_enabled', array(
+		'default'           => 0,
+		'sanitize_callback' => 'serranova_sanitize_int',
+		'type'              => 'theme_mod',
+		'transport'         => 'postMessage',
+	) );
+
+	$wp_customize->add_control( 'serranova_hero_blur_enabled', array(
+		'label'    => __( 'Blur amount (pixels)', 'serranova' ),
+		'section'  => 'serranova_hero',
+		'settings' => 'serranova_hero_blur_enabled',
+		'type'     => 'text',
 	) );
 
 	$wp_customize->add_setting( 'serranova_hero_image', array(
@@ -124,7 +150,7 @@ function serranova_customizer( $wp_customize )
 		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'serranova_hero_image', array(
-		'label'    => __( 'Background image', 'serranova' ),
+		'label'    => __( 'Right Image', 'serranova' ),
 		'section'  => 'serranova_hero',
 		'settings' => 'serranova_hero_image',
 	) ) );
@@ -239,6 +265,51 @@ function serranova_customizer( $wp_customize )
 		'label'    => __( 'Button 2 link', 'serranova' ),
 		'section'  => 'serranova_hero',
 		'settings' => 'serranova_hero_button2_link',
+		'type'     => 'text',
+	) );
+
+	$wp_customize->add_setting( 'serranova_hero_overlay_enabled', array(
+		'default'           => 'no',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control( 'serranova_hero_overlay_enabled', array(
+		'label'    => __( 'Overlay the image with color', 'serranova' ),
+		'section'  => 'serranova_hero',
+		'settings' => 'serranova_hero_overlay_enabled',
+		'type'     => 'select',
+		'choices'  => array( 'yes' => __( 'Yes', 'serranova' ), 'no' => __( 'No', 'serranova' ) ),
+	) );
+
+	$wp_customize->add_setting( 'serranova_hero_overlay_color', array(
+		'default'           => '#1f242d',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'serranova_sanitize_color_hex',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hero_overlay', array(
+		'label'    => __( 'Hero image overlay color', 'serranova' ),
+		'section'  => 'serranova_hero',
+		'settings' => 'serranova_hero_overlay_color',
+	) ) );
+
+
+	$wp_customize->add_setting( 'serranova_hero_overlay_opacity', array(
+		'default'           => '90',
+		'sanitize_callback' => 'serranova_sanitize_int',
+		'type'              => 'theme_mod',
+		'transport'         => 'postMessage',
+	) );
+
+	$wp_customize->add_control( 'serranova_hero_overlay_opacity', array(
+		'label'    => __( 'Overlay opacity (between 0 and 100)', 'serranova' ),
+		'section'  => 'serranova_hero',
+		'settings' => 'serranova_hero_overlay_opacity',
 		'type'     => 'text',
 	) );
 	// end hero banner

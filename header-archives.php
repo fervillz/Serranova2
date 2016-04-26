@@ -101,7 +101,15 @@
 
 
 <div id="hero">
-
+    <div class="hero-bg"></div>
+    <?php
+	$serranova_hero_overlay_enabled = get_theme_mod( 'serranova_hero_overlay_enabled', 'no' );
+	$hidden = '';
+	if ( $serranova_hero_overlay_enabled === 'no' ) {
+		$hidden = 'hidden';
+	}
+	echo '<div class="hero-overlay ' . $hidden . '"></div>';
+	?>
 	<div class="wrapper">
 
 		<h2><?php

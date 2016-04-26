@@ -54,6 +54,20 @@
 				});
 		});
 
+		// serranova hero banner bg image
+		wp.customize('serranova_hero_bg_image', function (value) {
+			value.bind(function (to) {
+			  $('#hero .hero-bg').attr('style', 'background-image: url(' + to + ')');
+			});
+		});
+
+		 // serranova hero blur
+		 wp.customize('serranova_hero_blur_enabled', function (value) {
+		    value.bind(function (to) {
+		      $('.hero-bg').css({'filter': 'blur(' + to + 'px)', '-webkit-filter': 'blur(' + to + 'px)'});
+		    });
+		 });
+
 		// serranova footer middle image
 		wp.customize('serranova_footer_image', function(value) {
 				value.bind(function(to) {
@@ -160,6 +174,38 @@
 				});
 		});
 
+		  //serranova hero overlay
+		  wp.customize('serranova_hero_overlay_enabled', function (value) {
+		    value.bind(function (to) {
+		      $('.hero-overlay').hide();
+		      if (to === 'yes') {
+		        $('.hero-overlay').show();
+		      }
+		    });
+		  });
+
+		  //serranova hero overlay color
+		  wp.customize('serranova_hero_overlay_color', function (value) {
+		    value.bind(function (to) {
+		      if (to !== 'blank') {
+		        $('.hero-overlay').css({'background-color': to});
+		      } else {
+		        $('.hero-overlay').css({'background-color': undefined});
+		      }
+		    });
+		  });
+
+		  //serranova hero overlay opacity
+		  wp.customize('serranova_hero_overlay_opacity', function (value) {
+		    value.bind(function (to) {
+		      if (to !== 'blank') {
+		        $('.hero-overlay').css({'opacity': to / 100});
+		      } else {
+		        $('.hero-overlay').css({'opacity': undefined});
+		      }
+		    });
+		  });
+
 		//serranova_google_fonts_heading_font
 
 		// Background color.
@@ -260,7 +306,7 @@
 								$('body #serranova-selection-styles').remove();
 						} else {
 								$('body').append('<style id="serranova-selection-styles">::selection {background: ' + to + '}</style>')
-								$('.insideposts #content a, .featurearea a, #footer a, .block_cont_in ul li .fa-folder-open-o, .block_cont_in ul li .fa-calendar-check-o, .block_cont_in ul li .fa-comments-o, .authorwidget .fa, .profile_cont .fa, .post-edit-link, .authormeta a, #cssmenu li a:hover ').css({
+								$('.sidebarwidget ul li .faf, #bottom a:hover, .insideposts #content a, .featurearea a, #footer a, .block_cont_in ul li .fa-folder-open-o, .block_cont_in ul li .fa-calendar-check-o, .block_cont_in ul li .fa-comments-o, .authorwidget .fa, .profile_cont .fa, .post-edit-link, .authormeta a, #cssmenu li a:hover ').css({
 										'color': to
 								});
 								$('.featurewidgeticon a').css({
@@ -312,7 +358,7 @@
 								$('.blogimage .fa, a.comment-reply-link, input[type="submit"], .search input.submit, .tab_head li:hover, .tab_head li.active, #hero .green, ::selection').css({
 										'background-color': to
 								});
-								$('#hero, #footer #bottom').css({
+								$('#hero').css({
 										'border-color': to
 								});
 								$('.blogpostmeta .fa, .socialmediamenu .fa, .profile_cont .fa, .herotext a, .postcontentmeta .fa').css({ color: to });

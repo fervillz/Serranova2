@@ -8,14 +8,14 @@
  */
 
 ?>
-<div class="wrapper featurearea">
-<div class="row">
-
-
-		<?php
+    <div class="wrapper featurearea">
+        <div class="row">
+            <?php
 		if ( is_active_sidebar( 'serranova-features' ) ) {
 			dynamic_sidebar( 'serranova-features' );
 		}
 		?>
- </div><!-- End featurearea -->
-</div><!-- End featurearea -->
+        </div>
+        <!-- End featurearea -->
+    </div>
+    <!-- End featurearea -->

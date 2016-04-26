@@ -10,7 +10,6 @@ $serranova_footer_text_r = get_theme_mod( 'serranova_footer_text_r' );
 ?>
 
 
-
 <div id="footer">	
 	<div class="top">
 		<div class="wrapper">
@@ -41,6 +40,8 @@ $serranova_footer_text_r = get_theme_mod( 'serranova_footer_text_r' );
 			</div>
 		</div>
 	</div><!-- .top -->
+
+
 	
 <div id="bottom">
 	<div class="wrapper">
@@ -67,19 +68,10 @@ $serranova_footer_text_r = get_theme_mod( 'serranova_footer_text_r' );
 			if ( !empty( $wp_customize ) && $wp_customize->is_preview() && !get_theme_mod( 'serranova_content_set', false ) ) {
 
 				the_widget(
-					'WP_Widget_Text', array(
-						'title' => 'TEXT WIDGET',
-						'text'  => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' ),
-					array(
-						'before_widget' => '<div class="col-1-4"><div class="wrap-col"><div class="footerwidget">',
-						'after_widget'  => '</div></div></div>',
-						'before_title'  => '<h6 class="widget-title">',
-						'after_title'   => '</h6>',
-					) );
-				the_widget(
-					'WP_Widget_Text', array(
-						'title' => 'TEXT WIDGET',
-						'text'  => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' ),
+					'WP_Nav_Menu_Widget', array(
+						'title' => 'Menu Widget',
+						'nav_menu'  => 2 ),
+
 					array(
 						'before_widget' => '<div class="col-1-4"><div class="wrap-col"><div class="footerwidget">',
 						'after_widget'  => '</div></div></div>',
@@ -88,9 +80,22 @@ $serranova_footer_text_r = get_theme_mod( 'serranova_footer_text_r' );
 					) );
 
 				the_widget(
-					'WP_Widget_Text', array(
-						'title' => 'TEXT WIDGET',
-						'text'  => 'Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Etiam aliquam, risus non vehicula vestibulum, purus tortor tempor mauris, consectetur semper tortor dolor sed mauris. Morbi nunc ipsum' ),
+					'WP_Nav_Menu_Widget', array(
+						'title' => 'Menu Widget',
+						'nav_menu'  => 2 ),
+
+					array(
+						'before_widget' => '<div class="col-1-4"><div class="wrap-col"><div class="footerwidget">',
+						'after_widget'  => '</div></div></div>',
+						'before_title'  => '<h6 class="widget-title">',
+						'after_title'   => '</h6>',
+					) );
+
+				the_widget(
+					'WP_Nav_Menu_Widget', array(
+						'title' => 'Menu Widget',
+						'nav_menu'  => 2 ),
+
 					array(
 						'before_widget' => '<div class="col-1-4"><div class="wrap-col"><div class="footerwidget">',
 						'after_widget'  => '</div></div></div>',

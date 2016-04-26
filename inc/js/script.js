@@ -68,5 +68,8 @@ $("#cssmenu").menumaker({
    format: "multitoggle"
 });
 
+
+$('.sidebarwidget ul li').prepend('<i class="fa faf fa-chevron-right" aria-hidden="true">');
+
 });
 })(jQuery);
